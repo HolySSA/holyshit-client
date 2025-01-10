@@ -338,6 +338,15 @@ public class UIRoom : UIBase
         }
     }
 
+    /// <summary>
+    /// 새로운 방장 업데이트
+    /// </summary>
+    public void UpdateRoomOwner(int newOwnerId)
+    {
+        roomData.OwnerId = newOwnerId;
+        UpdateStartButton();
+    }
+
     public override void HideDirect()
     {
         UIManager.Hide<UIRoom>();

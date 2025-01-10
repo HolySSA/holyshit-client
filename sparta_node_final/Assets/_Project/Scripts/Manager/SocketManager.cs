@@ -119,9 +119,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         UIManager.Get<UIRoom>().RemoveUserInfo(response.UserId);
 
         if (response.OwnerId != 0)
-        {
-
-        }
+            UIManager.Get<UIRoom>().UpdateRoomOwner(response.OwnerId);
     }
 
     /// <summary>
