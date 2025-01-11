@@ -207,6 +207,13 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     {
         var response = gamePacket.GameStartNotification;
 
+        var serverInfo = response.ServerInfo;
+        Debug.Log($"서버 정보 : 주소{serverInfo.Host}-포트{serverInfo.Port}-토큰{serverInfo.Token}");
+        // 로비 서버 연결 끊고
+        // 패킷으로 온 주소(게임서버주소)로 tcp 연결
+
+
+        /* 이걸 게임 서버 초기화 응답으로 받으면 하자.
         // 게임 씬으로 전환
         await SceneManager.LoadSceneAsync("Game");
 
@@ -216,35 +223,33 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
             await Task.Yield();
         }
 
-        /*
-        // 유저 정보 초기화
-        DataManager.instance.users.Clear();
-        // response로 받은 유저 정보 처리
-        for (int i = 0; i < response.Users.Count; i++)
-        {
-            if (response.Users[i] == null) continue;
-            var user = response.Users[i];
-            var userinfo = user.ToUserInfo();
+        // // 유저 정보 초기화
+        // DataManager.instance.users.Clear();
+        // // response로 받은 유저 정보 처리
+        // for (int i = 0; i < response.Users.Count; i++)
+        // {
+        //     if (response.Users[i] == null) continue;
+        //     var user = response.Users[i];
+        //     var userinfo = user.ToUserInfo();
 
-            // 현재 클라이언트 유저 정보 처리
-            if (UserInfo.myInfo.id == user.Id)
-            {
-                userinfo = UserInfo.myInfo;
-                // 현재 클라이언트 유저 정보 업데이트
-                UserInfo.myInfo.UpdateUserInfo(user);
-                // 유저 정보 추가
-                DataManager.instance.users.Add(UserInfo.myInfo);
-            }
-            else
-            {
-                // 다른 유저 정보 저장
-                DataManager.instance.users.Add(userinfo);
-            }
-        }
-        */
+        //     // 현재 클라이언트 유저 정보 처리
+        //     if (UserInfo.myInfo.id == user.Id)
+        //     {
+        //         userinfo = UserInfo.myInfo;
+        //         // 현재 클라이언트 유저 정보 업데이트
+        //         UserInfo.myInfo.UpdateUserInfo(user);
+        //         // 유저 정보 추가
+        //         DataManager.instance.users.Add(UserInfo.myInfo);
+        //     }
+        //     else
+        //     {
+        //         // 다른 유저 정보 저장
+        //         DataManager.instance.users.Add(userinfo);
+        //     }
+        // }
 
         // 캐릭터 생성 및 위치 초기화
-        for (int i = 0; i < response.Users.Count; i++)
+        for (int i = 0; i < response.CharacterPositions.Count; i++)
         {
             await GameManager.instance.OnCreateCharacter(DataManager.instance.users[i], i);
             GameManager.instance.isInit = true;
@@ -254,6 +259,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         // 게임 시작 및 상태 설정
         GameManager.instance.OnGameStart();
         GameManager.instance.SetGameState(response.GameState);
+        */
     }
 
     /// <summary>

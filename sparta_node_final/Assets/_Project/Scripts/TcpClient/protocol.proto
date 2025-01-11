@@ -72,6 +72,12 @@ message RoomUserReadyData {
     bool isReady = 2; // 현재 레디 상태
 }
 
+message GameServerInfoData {
+    string host = 1;
+    int32 port = 2;
+    string token = 3;  // 게임서버 인증용 토큰
+}
+
 /* 
     패킷 명세
 */
@@ -176,7 +182,6 @@ message S2CGetRoomReadyStateResponse {
     GlobalFailCode failCode = 3;
 }
 
-// 게임 시작 전 역할 및 캐릭터 셔플 요청
 message C2SGamePrepareRequest {
 
 }
@@ -201,7 +206,7 @@ message S2CGameStartResponse {
 
 message S2CGameStartNotification {
     GameStateData gameState = 1;
-    repeated UserData users = 2;
+    GameServerInfoData serverInfo = 2; // 접속할 게임 서버 정보
     repeated CharacterPositionData characterPositions = 3;
 }
 

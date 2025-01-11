@@ -277,7 +277,8 @@ public class UIRoom : UIBase
         await Task.Delay(5000);
 
         DataManager.instance.users = users;
-        /*
+
+        // 게임 시작 패킷 전송
         if (SocketManager.instance.isConnected)
         {
             if (UserInfo.myInfo.id == roomData.OwnerId)
@@ -287,11 +288,6 @@ public class UIRoom : UIBase
                 SocketManager.instance.Send(packet);
             }
         }
-        else
-        {
-            OnGameStart();
-        }
-        */
     }
 
     /// <summary>
