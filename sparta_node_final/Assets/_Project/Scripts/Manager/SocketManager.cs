@@ -123,7 +123,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     }
 
     /// <summary>
-    /// 게임 레디 응답 처리
+    /// 레디 응답 처리
     /// </summary>
     public void RoomReadyResponse(GamePacket gamePacket)
     {
@@ -136,7 +136,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     }
 
     /// <summary>
-    /// 게임 레디 알림 처리
+    /// 레디 알림 처리
     /// </summary>
     public void RoomReadyNotification(GamePacket gamePacket)
     {
@@ -167,7 +167,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     public void GamePrepareResponse(GamePacket gamePacket)
     {
         var response = gamePacket.GamePrepareResponse;
-        if (response.FailCode != 0)
+        if (!response.Success)
         {
             UIManager.ShowAlert(response.FailCode.ToString(), "게임 준비 실패");
             Debug.Log("GamePrepareResponse Failcode : " + response.FailCode.ToString());
@@ -180,14 +180,11 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     public void GamePrepareNotification(GamePacket gamePacket)
     {
         var response = gamePacket.GamePrepareNotification;
+
         if (response.Room != null)
-        {
             UIManager.Get<UIRoom>().SetRoomInfo(response.Room);
-        }
         if (response.Room.Users != null)
-        {
             UIManager.Get<UIRoom>().OnPrepare(response.Room.Users);
-        }
     }
 
     /// <summary>
@@ -219,6 +216,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
             await Task.Yield();
         }
 
+        /*
         // 유저 정보 초기화
         DataManager.instance.users.Clear();
         // response로 받은 유저 정보 처리
@@ -243,6 +241,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                 DataManager.instance.users.Add(userinfo);
             }
         }
+        */
 
         // 캐릭터 생성 및 위치 초기화
         for (int i = 0; i < response.Users.Count; i++)

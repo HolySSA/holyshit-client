@@ -247,11 +247,11 @@ public class UIRoom : UIBase
 
     public void OnPrepare(RepeatedField<UserData> users)
     {
+        /*
+        this.users.UpdateUserData(users);  // 확장 메서드 방식 - 두 코드는 동일한 동작 수행
+        ExtensionMethods.UpdateUserData(this.users, users);  // 정적 메서드 방식 - 두 코드는 동일한 동작 수행
+        */
         this.users.UpdateUserData(users);
-
-        //this.users.UpdateUserData(users);  // 확장 메서드 방식 - 두 코드는 동일한 동작 수행
-        //ExtensionMethods.UpdateUserData(this.users, users);  // 정적 메서드 방식 - 두 코드는 동일한 동작 수행
-
         OnPrepare(this.users);
     }
 
@@ -265,22 +265,19 @@ public class UIRoom : UIBase
         var idx = users.FindIndex(obj => obj.roleType == eRoleType.target);
         if (idx >= 0)
             slots[idx].OnTargetMark();
-        // 내 역할 아이콘 설정
-        var myIdx = users.FindIndex(obj => obj.id == UserInfo.myInfo.id);
-        slots[myIdx].SetRoleIcon(users[myIdx].roleType);
-
-        await Task.Delay(1000);
-
-        // 캐릭터 설정
+        // 역할 아이콘 설정
         for (int i = 0; i < users.Count; i++)
         {
-            slots[i].OnChangeCharacter(users[i].selectedCharacterRcode);
+            if (users[i].id == UserInfo.myInfo.id)
+                slots[i].SetRoleIcon(users[i].roleType); // 해당 유저만 실제 역할 아이콘 표시
+            else
+                slots[i].SetQuestionIcon(); // 나머지는 물음표 표시
         }
 
-        await Task.Delay(3000);
+        await Task.Delay(5000);
 
         DataManager.instance.users = users;
-
+        /*
         if (SocketManager.instance.isConnected)
         {
             if (UserInfo.myInfo.id == roomData.OwnerId)
@@ -294,6 +291,7 @@ public class UIRoom : UIBase
         {
             OnGameStart();
         }
+        */
     }
 
     /// <summary>

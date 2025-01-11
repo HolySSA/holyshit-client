@@ -51,6 +51,12 @@ public class ItemRoomSlot : UIListItem
 		target.gameObject.SetActive(true);
 	}
 
+	public void SetQuestionIcon()
+	{
+		target.sprite = questionSprite;
+		target.gameObject.SetActive(true);
+	}
+
 	public void OnClickTestAddUser()
 	{
 		callback?.Invoke(transform.GetSiblingIndex());
