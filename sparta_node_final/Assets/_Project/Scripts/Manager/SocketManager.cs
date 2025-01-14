@@ -203,17 +203,52 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     /// <summary>
     /// 게임 시작 알림 처리
     /// </summary>
-    public async void GameStartNotification(GamePacket gamePacket)
+    public void GameStartNotification(GamePacket gamePacket)
     {
         var response = gamePacket.GameStartNotification;
-
         var serverInfo = response.ServerInfo;
-        Debug.Log($"서버 정보 : 주소{serverInfo.Host}-포트{serverInfo.Port}-토큰{serverInfo.Token}");
-        // 로비 서버 연결 끊고
-        // 패킷으로 온 주소(게임서버주소)로 tcp 연결
+        var roomData = UIManager.Get<UIRoom>().GetRoomData();
+        // 서버 정보 디버그
+        Debug.Log($"[GameStart] 서버 정보: Host={serverInfo.Host}, Port={serverInfo.Port}, Token={serverInfo.Token}");
+        
+        // 룸 데이터 디버그
+        Debug.Log($"[GameStart] 방 정보: ID={roomData.Id}, Name={roomData.Name}, OwnerID={roomData.OwnerId}, UserCount={roomData.Users.Count}");
+        
+        // 유저 정보 디버그
+        Debug.Log($"[GameStart] 내 정보: ID={UserInfo.myInfo.id}");
 
+        Disconnect(false, false); // 로비 서버 연결 해제
+        Init(serverInfo.Host, serverInfo.Port); // 게임 서버 연결
+        Connect(() =>
+        {
+            Debug.Log("게임 서버 연결 성공");
+            // 게임 서버 초기화 패킷 전송
+            GamePacket initPacket = new GamePacket();
+            initPacket.GameServerInitRequest = new C2SGameServerInitRequest
+            {
+                UserId = UserInfo.myInfo.id,
+                Token = serverInfo.Token,
+                RoomData = roomData
+            };
+            Send(initPacket);
+            Debug.Log($"게임 서버 초기화 요청 전송 완료: {isConnected}");
+        });
+    }
 
-        /* 이걸 게임 서버 초기화 응답으로 받으면 하자.
+    public void GameServerInitResponse(GamePacket gamePacket)
+    {
+        var response = gamePacket.GameServerInitResponse;
+        if (response.Success)
+        {
+            // 게임 준비 화면 표시???
+            Debug.Log("게임 서버 초기화 응답 성공");
+        }
+    }
+
+    public void GameServerInitNotification(GamePacket gamePacket)
+    {
+        var response = gamePacket.GameServerInitNotification;
+        /*
         // 게임 씬으로 전환
         await SceneManager.LoadSceneAsync("Game");
 

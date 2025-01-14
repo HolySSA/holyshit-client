@@ -341,6 +341,14 @@ public class UIRoom : UIBase
         UpdateStartButton();
     }
 
+    /// <summary>
+    /// RoomData 반환
+    /// </summary>
+    public RoomData GetRoomData()
+    {
+        return roomData;
+    }
+
     public override void HideDirect()
     {
         UIManager.Hide<UIRoom>();

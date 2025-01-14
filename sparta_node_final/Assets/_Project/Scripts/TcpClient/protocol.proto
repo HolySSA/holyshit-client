@@ -205,9 +205,25 @@ message S2CGameStartResponse {
 }
 
 message S2CGameStartNotification {
+    GameServerInfoData serverInfo = 1; // 접속할 게임 서버 정보
+}
+
+message C2SGameServerInitRequest {
+    int32 userId = 1;
+    string token = 2;
+    RoomData roomData = 3;
+}
+
+// 게임 서버 초기화 응답
+message S2CGameServerInitResponse {
+    bool success = 1;
+    GlobalFailCode failCode = 2;
+}
+
+// 게임 시작 알림
+message S2CGameServerInitNotification {
     GameStateData gameState = 1;
-    GameServerInfoData serverInfo = 2; // 접속할 게임 서버 정보
-    repeated CharacterPositionData characterPositions = 3;
+    repeated CharacterPositionData characterPositions = 2;  // 모든 플레이어의 초기 위치
 }
 
 message C2SPositionUpdateRequest {
@@ -382,56 +398,63 @@ message GamePacket {
         S2CGameStartResponse gameStartResponse = 26;
         S2CGameStartNotification gameStartNotification = 27;
 
+        // 게임 서버 초기화
+        C2SGameServerInitRequest gameServerInitRequest = 28;
+        S2CGameServerInitResponse gameServerInitResponse = 29;
+        S2CGameServerInitNotification gameServerInitNotification = 30;
+
         // 위치 업데이트
-        C2SPositionUpdateRequest positionUpdateRequest = 28;
-        S2CPositionUpdateNotification positionUpdateNotification = 29;
+        C2SPositionUpdateRequest positionUpdateRequest = 31;
+        S2CPositionUpdateNotification positionUpdateNotification = 32;
 
         // 카드 사용
-        C2SUseCardRequest useCardRequest = 30;
-        S2CUseCardResponse useCardResponse = 31;
+        C2SUseCardRequest useCardRequest = 33;
+        S2CUseCardResponse useCardResponse = 34;
 
         // 카드 효과 알림
-        S2CUseCardNotification useCardNotification = 32;
-        S2CEquipCardNotification equipCardNotification = 33;
-        S2CCardEffectNotification cardEffectNotification = 34;
+        S2CUseCardNotification useCardNotification = 35;
+        S2CEquipCardNotification equipCardNotification = 36;
+        S2CCardEffectNotification cardEffectNotification = 37;
 
         // 플리마켓
-        S2CFleaMarketNotification fleaMarketNotification = 35;
-        C2SFleaMarketPickRequest fleaMarketPickRequest = 36;
-        S2CFleaMarketPickResponse fleaMarketPickResponse = 37;
+        S2CFleaMarketNotification fleaMarketNotification = 38;
+        C2SFleaMarketPickRequest fleaMarketPickRequest = 39;
+        S2CFleaMarketPickResponse fleaMarketPickResponse = 40;
 
         // 카드 사용 등으로 인한 유저 정보 업데이트
-        S2CUserUpdateNotification userUpdateNotification = 38;
+        S2CUserUpdateNotification userUpdateNotification = 41;
         
         // 페이즈 업데이트
-        S2CPhaseUpdateNotification phaseUpdateNotification = 39;
+        S2CPhaseUpdateNotification phaseUpdateNotification = 42;
 
         // 리액션
-        C2SReactionRequest reactionRequest = 40;
-        S2CReactionResponse reactionResponse = 41;
+        C2SReactionRequest reactionRequest = 43;
+        S2CReactionResponse reactionResponse = 44;
 
         // 턴 종료시 (phaseType 3) 카드 버리기
-        C2SDestroyCardRequest destroyCardRequest = 42;
-        S2CDestroyCardResponse destroyCardResponse = 43;
+        C2SDestroyCardRequest destroyCardRequest = 45;
+        S2CDestroyCardResponse destroyCardResponse = 46;
 
         // 게임 종료
-        S2CGameEndNotification gameEndNotification = 44;
+        S2CGameEndNotification gameEndNotification = 47;
 
         // 카드 선택
-        C2SCardSelectRequest cardSelectRequest = 45;
-        S2CCardSelectResponse cardSelectResponse = 46;
+        C2SCardSelectRequest cardSelectRequest = 48;
+        S2CCardSelectResponse cardSelectResponse = 49;
 
         // 디버프 넘기기
-        C2SPassDebuffRequest passDebuffRequest = 47;
-        S2CPassDebuffResponse passDebuffResponse = 48;
-        S2CWarningNotification warningNotification = 49;
+        C2SPassDebuffRequest passDebuffRequest = 50;
+        S2CPassDebuffResponse passDebuffResponse = 51;
+
+        // 경고
+        S2CWarningNotification warningNotification = 52;
 
         // 효과 알림
-        S2CAnimationNotification animationNotification = 50;
+        S2CAnimationNotification animationNotification = 53;
     }
 }
 
-/* 
+/*
     실패 코드
 */
 enum GlobalFailCode {

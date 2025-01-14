@@ -274,22 +274,21 @@ public abstract class TCPSocketManagerBase<T> : MonoSingleton<T> where T : TCPSo
     /// <summary>
     /// 서버와의 연결을 종료하고 필요한 경우 재연결
     /// </summary>
-    /// <param name="isReconnect"></param>
-    public async void Disconnect(bool isReconnect = false)
+    /// <param name="isReconnect">재연결 여부</param>
+    /// <param name="isError">에러 여부</param>
+    public async void Disconnect(bool isReconnect = false, bool isError = true)
     {
         StopAllCoroutines();
         if (isConnected)
         {
             this.isConnected = false;
-            GamePacket packet = new GamePacket();
-            packet.LoginRequest = new C2SLoginRequest();
-            Send(packet);
             socket.Disconnect(isReconnect);
+            
             if (isReconnect)
             {
                 Connect();
             }
-            else
+            else if (isError)
             {
                 if (SceneManager.GetActiveScene().name != "Main")
                 {
