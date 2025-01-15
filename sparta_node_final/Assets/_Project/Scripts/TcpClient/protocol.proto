@@ -54,7 +54,7 @@ message CharacterStateInfoData {
     CharacterStateType state = 1;
     CharacterStateType nextState = 2;
     int64 nextStateAt = 3; // state가 nextState로 풀리는 밀리초 타임스탬프. state가 NONE이면 0
-    int64 stateTargetUserId = 4; // state에 target이 있을 경우
+    int32 stateTargetUserId = 4; // state에 target이 있을 경우
 }
 
 message CharacterInfoData {
@@ -223,7 +223,8 @@ message S2CGameServerInitResponse {
 // 게임 시작 알림
 message S2CGameServerInitNotification {
     GameStateData gameState = 1;
-    repeated CharacterPositionData characterPositions = 2;  // 모든 플레이어의 초기 위치
+    repeated UserData users = 2;
+    repeated CharacterPositionData characterPositions = 3;  // 모든 플레이어의 초기 위치
 }
 
 message C2SPositionUpdateRequest {

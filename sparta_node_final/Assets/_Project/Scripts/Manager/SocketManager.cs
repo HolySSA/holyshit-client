@@ -208,20 +208,11 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         var response = gamePacket.GameStartNotification;
         var serverInfo = response.ServerInfo;
         var roomData = UIManager.Get<UIRoom>().GetRoomData();
-        // 서버 정보 디버그
-        Debug.Log($"[GameStart] 서버 정보: Host={serverInfo.Host}, Port={serverInfo.Port}, Token={serverInfo.Token}");
-        
-        // 룸 데이터 디버그
-        Debug.Log($"[GameStart] 방 정보: ID={roomData.Id}, Name={roomData.Name}, OwnerID={roomData.OwnerId}, UserCount={roomData.Users.Count}");
-        
-        // 유저 정보 디버그
-        Debug.Log($"[GameStart] 내 정보: ID={UserInfo.myInfo.id}");
 
         Disconnect(false, false); // 로비 서버 연결 해제
         Init(serverInfo.Host, serverInfo.Port); // 게임 서버 연결
         Connect(() =>
         {
-            Debug.Log("게임 서버 연결 성공");
             // 게임 서버 초기화 패킷 전송
             GamePacket initPacket = new GamePacket();
             initPacket.GameServerInitRequest = new C2SGameServerInitRequest
@@ -231,26 +222,26 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                 RoomData = roomData
             };
             Send(initPacket);
-            Debug.Log($"게임 서버 초기화 요청 전송 완료: {isConnected}");
         });
     }
 
-    public void GameServerInitResponse(GamePacket gamePacket)
+    public async void GameServerInitResponse(GamePacket gamePacket)
     {
         var response = gamePacket.GameServerInitResponse;
         if (response.Success)
         {
+            Debug.Log($"게임 서버 초기화 응답 성공 {response.FailCode}");
+
+            // 게임 씬으로 전환
+            await SceneManager.LoadSceneAsync("Game");
+
             // 게임 준비 화면 표시???
-            Debug.Log("게임 서버 초기화 응답 성공");
         }
     }
 
-    public void GameServerInitNotification(GamePacket gamePacket)
+    public async void GameServerInitNotification(GamePacket gamePacket)
     {
         var response = gamePacket.GameServerInitNotification;
-        /*
-        // 게임 씬으로 전환
-        await SceneManager.LoadSceneAsync("Game");
 
         // UI가 완전히 로드될 때까지 대기
         while (!UIManager.IsOpened<UIGame>())
@@ -258,30 +249,33 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
             await Task.Yield();
         }
 
-        // // 유저 정보 초기화
-        // DataManager.instance.users.Clear();
-        // // response로 받은 유저 정보 처리
-        // for (int i = 0; i < response.Users.Count; i++)
-        // {
-        //     if (response.Users[i] == null) continue;
-        //     var user = response.Users[i];
-        //     var userinfo = user.ToUserInfo();
+        // 게임 준비 화면 끄기
 
-        //     // 현재 클라이언트 유저 정보 처리
-        //     if (UserInfo.myInfo.id == user.Id)
-        //     {
-        //         userinfo = UserInfo.myInfo;
-        //         // 현재 클라이언트 유저 정보 업데이트
-        //         UserInfo.myInfo.UpdateUserInfo(user);
-        //         // 유저 정보 추가
-        //         DataManager.instance.users.Add(UserInfo.myInfo);
-        //     }
-        //     else
-        //     {
-        //         // 다른 유저 정보 저장
-        //         DataManager.instance.users.Add(userinfo);
-        //     }
-        // }
+
+        // 유저 정보 초기화
+        DataManager.instance.users.Clear();
+        // response로 받은 유저 정보 처리
+        for (int i = 0; i < response.Users.Count; i++)
+        {
+            if (response.Users[i] == null) continue;
+            var user = response.Users[i];
+            var userinfo = user.ToUserInfo();
+
+            // 현재 클라이언트 유저 정보 처리
+            if (UserInfo.myInfo.id == user.Id)
+            {
+                userinfo = UserInfo.myInfo;
+                // 현재 클라이언트 유저 정보 업데이트
+                UserInfo.myInfo.UpdateUserInfo(user);
+                // 유저 정보 추가
+                DataManager.instance.users.Add(UserInfo.myInfo);
+            }
+            else
+            {
+                // 다른 유저 정보 저장
+                DataManager.instance.users.Add(userinfo);
+            }
+        }
 
         // 캐릭터 생성 및 위치 초기화
         for (int i = 0; i < response.CharacterPositions.Count; i++)
@@ -294,7 +288,6 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         // 게임 시작 및 상태 설정
         GameManager.instance.OnGameStart();
         GameManager.instance.SetGameState(response.GameState);
-        */
     }
 
     /// <summary>
