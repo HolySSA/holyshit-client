@@ -133,6 +133,8 @@ public partial class UserInfo
         characterData = userData.Character;
         if (characterData != null)
         {
+            SetCharacterRcode(userData.Character.CharacterType);
+
             handCards.Clear();
             equips.Clear();
             debuffs.Clear();
@@ -169,6 +171,7 @@ public partial class UserInfo
         {
             Debug.Log($"[UserInfo] Character Info - HP: {userData.Character.Hp}, Type: {userData.Character.CharacterType}");
             this.maxHp = userData.Character.Hp;
+            SetCharacterRcode(userData.Character.CharacterType);
             foreach (var card in userData.Character.HandCards)
             {
                 for (int i = 0; i < card.Count; i++)

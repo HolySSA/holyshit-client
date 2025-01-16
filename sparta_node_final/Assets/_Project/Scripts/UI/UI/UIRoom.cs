@@ -24,7 +24,7 @@ public class UIRoom : UIBase
 
     private bool isReady = false;  // 현재 유저의 레디 상태
     private int maxUserCount;
-    RoomData roomData;
+    private RoomData roomData;
 
     /// <summary>
     /// UI가 열릴 때 호출되는 초기화 메서드
@@ -57,6 +57,9 @@ public class UIRoom : UIBase
     /// </summary>
     public void SetRoomInfo(RoomData roomData)
     {
+        // roomData 저장
+        this.roomData = roomData;
+
         // 방 정보 설정
         roomNo.text = roomData.Id.ToString();
         roomName.text = roomData.Name;

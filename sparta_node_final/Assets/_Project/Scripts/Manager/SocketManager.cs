@@ -230,8 +230,6 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         var response = gamePacket.GameServerInitResponse;
         if (response.Success)
         {
-            Debug.Log($"게임 서버 초기화 응답 성공 {response.FailCode}");
-
             // 게임 씬으로 전환
             await SceneManager.LoadSceneAsync("Game");
 
@@ -241,53 +239,67 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
 
     public async void GameServerInitNotification(GamePacket gamePacket)
     {
-        var response = gamePacket.GameServerInitNotification;
+        // 이미 처리 중인지 확인
+        if (isProcessingInit) return;
+        isProcessingInit = true;
 
-        // UI가 완전히 로드될 때까지 대기
-        while (!UIManager.IsOpened<UIGame>())
+        try
         {
-            await Task.Yield();
-        }
+            var response = gamePacket.GameServerInitNotification;
 
-        // 게임 준비 화면 끄기
-
-
-        // 유저 정보 초기화
-        DataManager.instance.users.Clear();
-        // response로 받은 유저 정보 처리
-        for (int i = 0; i < response.Users.Count; i++)
-        {
-            if (response.Users[i] == null) continue;
-            var user = response.Users[i];
-            var userinfo = user.ToUserInfo();
-
-            // 현재 클라이언트 유저 정보 처리
-            if (UserInfo.myInfo.id == user.Id)
+            // UI가 완전히 로드될 때까지 대기
+            while (!UIManager.IsOpened<UIGame>())
             {
-                userinfo = UserInfo.myInfo;
-                // 현재 클라이언트 유저 정보 업데이트
-                UserInfo.myInfo.UpdateUserInfo(user);
-                // 유저 정보 추가
-                DataManager.instance.users.Add(UserInfo.myInfo);
+                await Task.Yield();
             }
-            else
-            {
-                // 다른 유저 정보 저장
-                DataManager.instance.users.Add(userinfo);
-            }
-        }
 
-        // 캐릭터 생성 및 위치 초기화
-        for (int i = 0; i < response.CharacterPositions.Count; i++)
-        {
-            await GameManager.instance.OnCreateCharacter(DataManager.instance.users[i], i);
+            // 게임 준비 화면 끄기
+
+
+            // 유저 정보 초기화
+            DataManager.instance.users.Clear();
+            // response로 받은 유저 정보 처리
+            foreach (var user in response.Users)
+            {
+                //Debug.Log($"캐릭터 초기화: ID={user.Id}, CharacterType={user.Character?.CharacterType}");
+
+                var userinfo = user.ToUserInfo();
+                if (UserInfo.myInfo.id == user.Id)
+                {
+                    userinfo = UserInfo.myInfo;
+                    UserInfo.myInfo.UpdateUserInfo(user);
+                    DataManager.instance.users.Add(UserInfo.myInfo); // 내 정보 추가
+                }
+                else
+                {
+                    DataManager.instance.users.Add(userinfo); // 다른 유저 정보 추가
+                }
+
+                var character = await GameManager.instance.OnCreateCharacter(userinfo, DataManager.instance.users.Count - 1);
+                if (character == null)
+                {
+                    Debug.LogError($"캐릭터 생성 실패: userId={user.Id}");
+                    continue;
+                }
+
+                var positionData = response.CharacterPositions.FirstOrDefault(pos => pos.Id == user.Id);
+                if (positionData != null)
+                {
+                    // 캐릭터 생성 및 초기 위치 설정
+                    var position = positionData.PositionToVector();
+                    character.SetPosition(position);
+                }
+            }
+
+            // 게임 시작 및 상태 설정
             GameManager.instance.isInit = true;
-            GameManager.instance.characters[DataManager.instance.users[i].id].SetPosition(response.CharacterPositions[i].ToVector3());
+            GameManager.instance.OnGameStart();
+            GameManager.instance.SetGameState(response.GameState);
         }
-
-        // 게임 시작 및 상태 설정
-        GameManager.instance.OnGameStart();
-        GameManager.instance.SetGameState(response.GameState);
+        finally
+        {
+            isProcessingInit = false;
+        }
     }
 
     /// <summary>

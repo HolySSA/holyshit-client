@@ -53,7 +53,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     public async void Init()
     {
-        // ī�� ���� ���� ����
         var deckDatas = DataManager.instance.GetDatas<DeckData>();
         var cards = new List<CardDataSO>();
         foreach (var deckData in deckDatas)
@@ -65,7 +64,6 @@ public class GameManager : MonoSingleton<GameManager>
         }
         worldDeck = new Queue<CardDataSO>(cards.Shuffle());
 
-        //���� ĳ���� ����
         var bounds = tilemapRenderer.bounds;
         var myIndex = DataManager.instance.users.FindIndex(obj => obj == UserInfo.myInfo);
         spawns = new List<Transform>(spawnPoints);
@@ -159,7 +157,7 @@ public class GameManager : MonoSingleton<GameManager>
         UIGame.instance.SetDeckCount();
     }
 
-    public async Task OnCreateCharacter(UserInfo userinfo, int idx)
+    public async Task<Character> OnCreateCharacter(UserInfo userinfo, int idx)
     {
         var myIndex = DataManager.instance.users.FindIndex(obj => obj == UserInfo.myInfo);
         var chara = await AddCharacter(userinfo.selectedCharacterRcode, userinfo.id == UserInfo.myInfo.id ? eCharacterType.playable : eCharacterType.non_playable, userinfo.id);
@@ -169,6 +167,8 @@ public class GameManager : MonoSingleton<GameManager>
             chara.SetTargetMark();
         chara.OnVisibleMinimapIcon(Util.GetDistance(myIndex, idx, DataManager.instance.users.Count) <= UserInfo.myInfo.slotRange && myIndex != idx); // ������ �Ÿ��� �ִ� ���� �����ܸ� ǥ��
         chara.userInfo = userinfo;
+
+        return chara;
     }
 
     public void OnDrawCard(UserInfo user)
@@ -208,9 +208,16 @@ public class GameManager : MonoSingleton<GameManager>
 
     public async Task<Character> AddCharacter(string rcode, eCharacterType characterType, int id)
     {
+        var characterData = DataManager.instance.GetData<CharacterDataSO>(rcode);
+        if (characterData == null)
+        {
+            Debug.LogError($"CharacterDataSO를 찾을 수 없음: rcode={rcode}");
+            return null;
+        }
+
         var character = Instantiate(await ResourceManager.instance.LoadAsset<Character>("Character", eAddressableType.Prefabs));
         character.name = rcode;
-        character.Init(DataManager.instance.GetData<CharacterDataSO>(rcode));
+        character.Init(characterData);
         character.SetCharacterType(characterType);
         characters.Add(id, character);
         if (characterType == eCharacterType.playable)
