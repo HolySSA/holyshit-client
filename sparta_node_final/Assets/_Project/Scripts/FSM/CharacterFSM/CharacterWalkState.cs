@@ -36,7 +36,7 @@ public class CharacterWalkState : CharacterState
     public override void OnStateUpdate()
     {
         // 걷기 애니메이션으로 변경
-        if(anim != null && !anim.IsAnim("walk"))
+        if (anim != null && !anim.IsAnim("walk"))
         {
             anim.ChangeAnimation("walk");
         }
@@ -53,14 +53,13 @@ public class CharacterWalkState : CharacterState
             Vector2 currentPos = character.transform.position;
             float movedDistance = Vector2.Distance(lastSyncPosition, currentPos);
 
-
             // 서버에 위치 정보 전송
             if (syncTimer >= SYNC_INTERVAL || movedDistance > 0.5f)
             {
                 GamePacket packet = new GamePacket();
-                packet.PositionUpdateRequest = new C2SPositionUpdateRequest() 
-                { 
-                    X = currentPos.x, 
+                packet.PositionUpdateRequest = new C2SPositionUpdateRequest()
+                {
+                    X = currentPos.x,
                     Y = currentPos.y,
                 };
 
