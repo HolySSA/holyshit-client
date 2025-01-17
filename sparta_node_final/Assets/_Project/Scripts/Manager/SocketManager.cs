@@ -35,6 +35,9 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         UIManager.Get<PopupLogin>().OnLoginEnd(response.Success, response.LastSelectedCharacter);
     }
 
+    /// <summary>
+    /// 캐릭터 선택 응답 처리
+    /// </summary>
     public void SelectCharacterResponse(GamePacket gamePacket)
     {
         var response = gamePacket.SelectCharacterResponse;
@@ -203,28 +206,58 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     /// <summary>
     /// 게임 시작 알림 처리
     /// </summary>
-    public void GameStartNotification(GamePacket gamePacket)
+    public async void GameStartNotification(GamePacket gamePacket)
     {
         var response = gamePacket.GameStartNotification;
         var serverInfo = response.ServerInfo;
         var roomData = UIManager.Get<UIRoom>().GetRoomData();
 
+        const int maxRetries = 3;  // 최대 재시도 횟수
+        int retryCount = 0;
+        bool connected = false;
+
         Disconnect(false, false); // 로비 서버 연결 해제
-        Init(serverInfo.Host, serverInfo.Port); // 게임 서버 연결
-        Connect(() =>
+
+        while (!connected && retryCount < maxRetries)
         {
-            // 게임 서버 초기화 패킷 전송
-            GamePacket initPacket = new GamePacket();
-            initPacket.GameServerInitRequest = new C2SGameServerInitRequest
+            try
             {
-                UserId = UserInfo.myInfo.id,
-                Token = serverInfo.Token,
-                RoomData = roomData
-            };
-            Send(initPacket);
-        });
+                Init(serverInfo.Host, serverInfo.Port); // 게임 서버 연결
+                var connectTask = new TaskCompletionSource<bool>();
+
+                Connect(() =>
+                {
+                    // 게임 서버 초기화 패킷 전송
+                    GamePacket initPacket = new GamePacket();
+                    initPacket.GameServerInitRequest = new C2SGameServerInitRequest
+                    {
+                        UserId = UserInfo.myInfo.id,
+                        Token = serverInfo.Token,
+                        RoomData = roomData
+                    };
+                    Send(initPacket);
+                    connectTask.SetResult(true);
+                });
+
+                // 연결 대기 (5초 타임아웃)
+                if (await Task.WhenAny(connectTask.Task, Task.Delay(5000)) == connectTask.Task)
+                {
+                    connected = true;
+                    break;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"게임 서버 연결 실패 (시도 {retryCount + 1}/{maxRetries}): {e}");
+                await Task.Delay(1000); // 1초 대기 후 재시도
+            }
+            retryCount++;
+        }
     }
 
+    /// <summary>
+    /// 게임 서버 초기화 응답 처리
+    /// </summary>
     public async void GameServerInitResponse(GamePacket gamePacket)
     {
         var response = gamePacket.GameServerInitResponse;
@@ -237,11 +270,13 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         }
     }
 
+    /// <summary>
+    /// 게임 서버 초기화 알림 처리
+    /// </summary>
     public async void GameServerInitNotification(GamePacket gamePacket)
     {
-        // 이미 처리 중인지 확인
-        if (isProcessingInit) return;
-        isProcessingInit = true;
+        // 이미 초기화 되었는지 확인
+        if (GameManager.instance.isInit) return;
 
         try
         {
@@ -296,9 +331,10 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
             GameManager.instance.OnGameStart();
             GameManager.instance.SetGameState(response.GameState);
         }
-        finally
+        catch (Exception e)
         {
-            isProcessingInit = false;
+            Debug.LogError($"게임 초기화 오류: {e}");
+            await SceneManager.LoadSceneAsync("Main");
         }
     }
 
@@ -334,7 +370,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     }
 
     /// <summary>
-    /// 카드 사용 알림 처리
+    /// 카드 사용 알림 처리 - UI 업데이트 로직
     /// </summary>
     public async void UseCardNotification(GamePacket gamePacket)
     {
@@ -346,7 +382,9 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         }
         var use = DataManager.instance.users.Find(obj => obj.id == response.UserId);
         var target = DataManager.instance.users.Find(obj => obj.id == response.TargetUserId);
-        var text = string.Format(response.TargetUserId != 0 ? "{0}������ {1}ī�带 ����߽��ϴ�." : "{0}������ {1}ī�带 {2}�������� ����߽��ϴ�.",
+        var text = string.Format(response.TargetUserId == 0 ?
+            "{0}님이 {1}카드를 사용했습니다." : // 타겟 X
+            "{0}님이 {1}카드를 {2}님에게 사용했습니다.", // 타겟 O
             use.nickname, response.CardType.GetCardData().displayName, target.nickname);
         UIGame.instance.SetNotice(text);
         if (response.UserId == UserInfo.myInfo.id && card.cardType == CardType.Bbang)
@@ -357,6 +395,9 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
 
     }
 
+    /// <summary>
+    /// 카드 장착 알림 처리 - 실제 사용 로직
+    /// </summary>
     public void EquipCardNotification(GamePacket gamePacket)
     {
         var response = gamePacket.UseCardNotification;
@@ -364,12 +405,18 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         userinfo.OnUseCard(response.CardType.GetCardRcode());
     }
 
+    /// <summary>
+    /// 카드 효과 구현 로직 - 수정필요 (일단 UI표시 다시 한 번 더)
+    /// </summary>
+    /// <param name="gamePacket"></param>
     public void CardEffectNotification(GamePacket gamePacket)
     {
         var response = gamePacket.UseCardNotification;
         var use = DataManager.instance.users.Find(obj => obj.id == response.UserId);
         var target = DataManager.instance.users.Find(obj => obj.id == response.TargetUserId);
-        var text = string.Format(response.TargetUserId != 0 ? "{0}������ {1}ī�带 ����߽��ϴ�." : "{0}������ {1}ī�带 {2}�������� ����߽��ϴ�.",
+        var text = string.Format(response.TargetUserId == 0 ?
+            "{0}님이 {1}카드를 사용했습니다." : // 타겟 X
+            "{0}님이 {1}카드를 {2}님에게 사용했습니다.", // 타겟 O
             use.nickname, response.CardType.GetCardData().displayName, target.nickname);
         UIGame.instance.SetNotice(text);
     }
@@ -403,6 +450,9 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         }
     }
 
+    /// <summary>
+    /// 공격에 따른 리액션 응답 처리
+    /// </summary>
     public void ReactionResponse(GamePacket gamePacket)
     {
         var response = gamePacket.ReactionResponse;
@@ -413,17 +463,22 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         }
     }
 
-    // ī�� ��� ������ ���� ���� ���� ������Ʈ
+    /// <summary>
+    /// 카드 사용 등으로 인한 유저 상태 업데이트 알림 처리
+    /// </summary>
     public async void UserUpdateNotification(GamePacket gamePacket)
     {
+        // 애니메이션 재생 중 대기
         while (isAnimationPlaying)
         {
             await Task.Delay(100);
         }
+        // 유저 정보 업데이트
         var response = gamePacket.UserUpdateNotification;
         var users = DataManager.instance.users.UpdateUserData(response.User);
         if (!GameManager.isInstance || GameManager.instance.characters == null || GameManager.instance.characters.Count == 0) return;
         var myIndex = users.FindIndex(obj => obj.id == UserInfo.myInfo.id);
+        // 모든 유저 상태 업데이트
         for (int i = 0; i < users.Count; i++)
         {
             var targetCharacter = GameManager.instance.characters[users[i].id];
@@ -432,8 +487,10 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                 targetCharacter.SetDeath();
                 UIGame.instance.SetDeath(users[i].id);
             }
-            targetCharacter.OnVisibleMinimapIcon(Util.GetDistance(myIndex, i, DataManager.instance.users.Count) + users[i].slotFar <= UserInfo.myInfo.slotRange && myIndex != i); // ������ �Ÿ��� �ִ� ���� �����ܸ� ǥ��
+            // 미니맵 아이콘 표시 여부 설정 - 내 시야 범위(slotRange) 내에 있는 유저인지 확인 + 스탤스 상태 확인
+            targetCharacter.OnVisibleMinimapIcon(Util.GetDistance(myIndex, i, DataManager.instance.users.Count) + users[i].slotFar <= UserInfo.myInfo.slotRange && myIndex != i);
 
+            // 각 유저의 상태에 따른 캐릭터 상태 처리
             GamePacket packet = new GamePacket();
             Action<int, int> callback = (type, userId) =>
             {
@@ -450,27 +507,29 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                 }
                 Send(packet);
             };
+
+            // 내 정보 처리
             if (users[i].id == UserInfo.myInfo.id)
             {
                 var user = users[i];
                 var targetId = user.characterData.StateInfo.StateTargetUserId;
                 var targetInfo = DataManager.instance.users.Find(obj => obj.id == targetId);
+
+                // 폭탄
                 if (user.debuffs.Find(obj => obj.rcode == "CAD00023"))
-                {
                     UIGame.instance.SetBombButton(true);
-                }
                 else
-                {
                     UIGame.instance.SetBombButton(false);
-                }
+                
+                // 캐릭터 상태에 따른 처리
                 switch ((eCharacterState)users[i].characterData.StateInfo.State)
                 {
-                    case eCharacterState.BBANG_SHOOTER: // �� ��� �� ���
+                    case eCharacterState.BBANG_SHOOTER: // 뻥야 시전자
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                         }
                         break;
-                    case eCharacterState.BBANG_TARGET: // �� Ÿ��
+                    case eCharacterState.BBANG_TARGET: // 빵야 대상자
                         {
                             var card = DataManager.instance.GetData<CardDataSO>("CAD00001");
                             if (user.handCards.FindAll(obj => obj.rcode == card.defCard).Count >= targetInfo.needShieldCount)
@@ -484,7 +543,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                             }
                         }
                         break;
-                    case eCharacterState.DEATH_MATCH: // ���� ���
+                    case eCharacterState.DEATH_MATCH: // 현피 중 내 턴 X
                         {
                             var card = DataManager.instance.GetData<CardDataSO>("CAD00006");
                             if (user.handCards.Find(obj => obj.rcode == card.defCard))
@@ -495,7 +554,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                             }
                         }
                         break;
-                    case eCharacterState.DEATH_MATCH_TURN: // ���� ����
+                    case eCharacterState.DEATH_MATCH_TURN: // 현피 중 내 턴
                         {
                             var card = DataManager.instance.GetData<CardDataSO>("CAD00006");
                             if (user.handCards.Find(obj => obj.rcode == card.defCard))
@@ -511,7 +570,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                             }
                         }
                         break;
-                    case eCharacterState.FLEA_MARKET_TURN: // �ø����� �� ��
+                    case eCharacterState.FLEA_MARKET_TURN: // 플리마켓 중 내 턴
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                             var ui = UIManager.Get<PopupPleaMarket>();
@@ -523,7 +582,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                             ui.SetUserSelectTurn((int)dt.TotalSeconds);
                         }
                         break;
-                    case eCharacterState.FLEA_MARKET_WAIT: // �ö��� ���
+                    case eCharacterState.FLEA_MARKET_WAIT: // 플리마켓 중 내 턴 X
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                             var ui = UIManager.Get<PopupPleaMarket>();
@@ -533,12 +592,12 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                             }
                         }
                         break;
-                    case eCharacterState.GUERRILLA_SHOOTER:
+                    case eCharacterState.GUERRILLA_SHOOTER: // 게릴라 시전자
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                         }
                         break;
-                    case eCharacterState.GUERRILLA_TARGET:
+                    case eCharacterState.GUERRILLA_TARGET: // 게릴라 대상자
                         {
                             var card = DataManager.instance.GetData<CardDataSO>("CAD00007");
                             if (user.handCards.Find(obj => obj.rcode == card.defCard))
@@ -554,12 +613,12 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                             }
                         }
                         break;
-                    case eCharacterState.BIG_BBANG_SHOOTER:
+                    case eCharacterState.BIG_BBANG_SHOOTER: // 난사 시전자
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                         }
                         break;
-                    case eCharacterState.BIG_BBANG_TARGET:
+                    case eCharacterState.BIG_BBANG_TARGET: // 난사 대상자
                         {
                             var card = DataManager.instance.GetData<CardDataSO>("CAD00002");
                             if (user.handCards.Find(obj => obj.rcode == card.defCard))
@@ -575,27 +634,27 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                             }
                         }
                         break;
-                    case eCharacterState.ABSORBING:
+                    case eCharacterState.ABSORBING:  // 흡수 중
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                         }
                         break;
-                    case eCharacterState.ABSORB_TARGET:
+                    case eCharacterState.ABSORB_TARGET: // 흡수 대상자
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                         }
                         break;
-                    case eCharacterState.HALLUCINATING:
+                    case eCharacterState.HALLUCINATING: // 신기루 중
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                         }
                         break;
-                    case eCharacterState.HALLUCINATION_TARGET:
+                    case eCharacterState.HALLUCINATION_TARGET: // 신기루 대상자
                         {
                             targetCharacter.OnChangeState<CharacterStopState>();
                         }
                         break;
-                    case eCharacterState.NONE:
+                    case eCharacterState.NONE: // 아무 상태도 아닐 때
                         {
                             if (!targetCharacter.IsState<CharacterDeathState>())
                             {
@@ -607,7 +666,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                                 UIManager.Hide<PopupBattle>();
                         }
                         break;
-                    case eCharacterState.CONTAINED:
+                    case eCharacterState.CONTAINED: // 감금 중
                         {
                             Debug.Log(user.id + " is prison");
                             GameManager.instance.userCharacter.OnChangeState<CharacterPrisonState>();
@@ -618,7 +677,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                         break;
                 }
             }
-            else
+            else // 다른 유저 상태 처리
             {
                 if (!targetCharacter.IsState<CharacterDeathState>())
                 {
@@ -633,6 +692,8 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                 }
             }
         }
+
+        // UI 업데이트
         if (UIGame.instance != null)
             UIGame.instance.UpdateUserSlot(users);
     }

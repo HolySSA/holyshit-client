@@ -31,7 +31,6 @@ public abstract class TCPSocketManagerBase<T> : MonoSingleton<T> where T : TCPSo
     private byte[] remainBuffer = Array.Empty<byte>(); // 남은 버퍼
 
     public bool isConnected; // 연결 여부
-    public bool isProcessingInit = false; // 중복 여부
     bool isInit = false; // 초기화 여부
 
     /// <summary>
@@ -203,7 +202,7 @@ public abstract class TCPSocketManagerBase<T> : MonoSingleton<T> where T : TCPSo
             }
             if (socket != null && socket.Connected)
             {
-                Debug.Log("���� ���ú� ���� �ٽ� ����");
+                Debug.Log("데이터 수신 다시 시작");
                 OnReceive();
             }
         }
