@@ -212,47 +212,23 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         var serverInfo = response.ServerInfo;
         var roomData = UIManager.Get<UIRoom>().GetRoomData();
 
-        const int maxRetries = 3;  // 최대 재시도 횟수
-        int retryCount = 0;
-        bool connected = false;
-
+        await Task.Delay(500);
         Disconnect(false, false); // 로비 서버 연결 해제
+        await Task.Delay(500);
 
-        while (!connected && retryCount < maxRetries)
+        Init(serverInfo.Host, serverInfo.Port); // 게임 서버 연결
+        Connect(() =>
         {
-            try
+            // 게임 서버 초기화 패킷 전송
+            GamePacket initPacket = new GamePacket();
+            initPacket.GameServerInitRequest = new C2SGameServerInitRequest
             {
-                Init(serverInfo.Host, serverInfo.Port); // 게임 서버 연결
-                var connectTask = new TaskCompletionSource<bool>();
-
-                Connect(() =>
-                {
-                    // 게임 서버 초기화 패킷 전송
-                    GamePacket initPacket = new GamePacket();
-                    initPacket.GameServerInitRequest = new C2SGameServerInitRequest
-                    {
-                        UserId = UserInfo.myInfo.id,
-                        Token = serverInfo.Token,
-                        RoomData = roomData
-                    };
-                    Send(initPacket);
-                    connectTask.SetResult(true);
-                });
-
-                // 연결 대기 (5초 타임아웃)
-                if (await Task.WhenAny(connectTask.Task, Task.Delay(5000)) == connectTask.Task)
-                {
-                    connected = true;
-                    break;
-                }
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"게임 서버 연결 실패 (시도 {retryCount + 1}/{maxRetries}): {e}");
-                await Task.Delay(1000); // 1초 대기 후 재시도
-            }
-            retryCount++;
-        }
+                UserId = UserInfo.myInfo.id,
+                Token = serverInfo.Token,
+                RoomData = roomData
+            };
+            Send(initPacket);
+        });
     }
 
     /// <summary>
@@ -276,7 +252,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     public async void GameServerInitNotification(GamePacket gamePacket)
     {
         // 이미 초기화 되었는지 확인
-        if (GameManager.instance.isInit) return;
+        //if (GameManager.instance.isInit) return;
 
         try
         {
@@ -494,6 +470,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
             GamePacket packet = new GamePacket();
             Action<int, int> callback = (type, userId) =>
             {
+                // 방어카드 X일 경우
                 if (type == 0 || userId == 0)
                 {
                     packet.ReactionRequest = new C2SReactionRequest();
@@ -539,7 +516,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                             }
                             else
                             {
-                                callback.Invoke(0, 0);
+                                callback.Invoke(0, 0); // 방어카드 X일 경우
                             }
                         }
                         break;

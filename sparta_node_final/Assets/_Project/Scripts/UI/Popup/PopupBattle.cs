@@ -91,13 +91,16 @@ public class PopupBattle : UIListBase<Card>
         useButton.interactable = true;
     }
 
+    /// <summary>
+    /// 카드 사용 - 실드 O
+    /// </summary>
     public void OnClickUse()
     {
         var idx = uiPagingViewController.selectedIdx;
         var card = cards[idx];
         if (SocketManager.instance.isConnected)
         {
-            callback.Invoke((int)card.cardType, targetUser.id);
+            callback.Invoke((int)card.cardType, targetUser.id); // 카드 타입 담아서 callback 호출
         }
         else
         {
@@ -109,6 +112,9 @@ public class PopupBattle : UIListBase<Card>
 
     }
 
+    /// <summary>
+    /// 데미지 받기 - 실드 X
+    /// </summary>
     public void OnClickDamage()
     {
         if (SocketManager.instance.isConnected)
