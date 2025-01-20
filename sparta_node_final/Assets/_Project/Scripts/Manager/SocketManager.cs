@@ -320,10 +320,13 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     public void PositionUpdateNotification(GamePacket gamePacket)
     {
         var response = gamePacket.PositionUpdateNotification;
-        for (int i = 0; i < response.CharacterPositions.Count; i++)
+        foreach (var positionData in response.CharacterPositions)
         {
-            if (GameManager.instance.characters != null && GameManager.instance.characters.ContainsKey(response.CharacterPositions[i].Id))
-                GameManager.instance.characters[response.CharacterPositions[i].Id].SetMovePosition(response.CharacterPositions[i].ToVector3());
+            if (GameManager.instance.characters != null && GameManager.instance.characters.ContainsKey(positionData.Id))
+            {
+                var character = GameManager.instance.characters[positionData.Id];
+                character.SetMovePosition(positionData.PositionToVector());
+            }
         }
     }
 
@@ -675,7 +678,9 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
             UIGame.instance.UpdateUserSlot(users);
     }
 
-    // �� ����� (phaseType 3) ī�� ������
+    /// <summary>
+    /// 카드 버리기 응답 처리
+    /// </summary>
     public void DestroyCardResponse(GamePacket gamePacket)
     {
         var response = gamePacket.DestroyCardResponse;
@@ -685,19 +690,29 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         UIGame.instance.SetDeckCount();
     }
 
-    // ������ ������Ʈ
+    /// <summary>
+    /// 페이즈 업데이트 알림 처리
+    /// </summary>
     public void PhaseUpdateNotification(GamePacket gamePacket)
     {
         var response = gamePacket.PhaseUpdateNotification;
         if (UIGame.instance != null)
             GameManager.instance.SetGameState(response.PhaseType, response.NextPhaseAt);
-        for (int i = 0; i < response.CharacterPositions.Count; i++)
+
+        // 캐릭터 위치 업데이트
+        foreach (var positionData in response.CharacterPositions)
         {
-            GameManager.instance.characters[DataManager.instance.users[i].id].SetPosition(response.CharacterPositions[i].ToVector3());
+            if (GameManager.instance.characters.ContainsKey(positionData.Id))
+            {
+                var character = GameManager.instance.characters[positionData.Id];
+                character.SetPosition(positionData.PositionToVector());
+            }
         }
     }
 
-    // ���� ����
+    /// <summary>
+    /// 게임 종료 알림 처리
+    /// </summary>
     public void GameEndNotification(GamePacket gamePacket)
     {
         var response = gamePacket.GameEndNotification;
