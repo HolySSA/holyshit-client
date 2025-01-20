@@ -120,7 +120,7 @@ public class GameManager : MonoSingleton<GameManager>
         isAfternoon = PhaseType == PhaseType.Day;
         UIManager.Get<UIGame>().OnDaySetting(day, PhaseType, NextPhaseAt);
 
-        if (PhaseType == PhaseType.End)
+        if (PhaseType == PhaseType.Evening)
         {
             if (UserInfo.myInfo.handCards.Count > UserInfo.myInfo.hp)
                 UIManager.Show<PopupRemoveCardSelection>();
