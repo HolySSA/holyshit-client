@@ -72,10 +72,10 @@ message RoomUserReadyData {
     bool isReady = 2; // 현재 레디 상태
 }
 
-message GameServerInfoData {
+message ServerInfoData {
     string host = 1;
     int32 port = 2;
-    string token = 3;  // 게임서버 인증용 토큰
+    string token = 3;  // 서버 인증용 토큰
 }
 
 /* 
@@ -205,7 +205,7 @@ message S2CGameStartResponse {
 }
 
 message S2CGameStartNotification {
-    GameServerInfoData serverInfo = 1; // 접속할 게임 서버 정보
+    ServerInfoData serverInfo = 1; // 접속할 게임 서버 정보
 }
 
 message C2SGameServerInitRequest {
@@ -344,6 +344,15 @@ message S2CAnimationNotification {
     AnimationType animationType = 2;
 }
 
+message C2SComeBackLobbyRequest {
+
+}
+
+message S2CComeBackLobbyResponse {
+    int32 userId = 1;
+    ServerInfoData serverInfo = 2; // 접속할 로비 서버 정보
+}
+
 // 최상위 GamePacket 메시지
 message GamePacket {
     oneof payload {
@@ -452,6 +461,10 @@ message GamePacket {
 
         // 효과 알림
         S2CAnimationNotification animationNotification = 53;
+
+        // 로비서버 복귀
+        C2SComeBackLobbyRequest comeBackLobbyRequest = 60;
+        S2CComeBackLobbyResponse comeBackLobbyResponse = 61;
     }
 }
 

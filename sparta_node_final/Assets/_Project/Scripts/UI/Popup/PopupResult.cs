@@ -65,12 +65,11 @@ public class PopupResult : UIBase
     /// <summary>
     /// 나가기 버튼 클릭 시 호출
     /// </summary>
-    public async void OnClickExit()
+    public void OnClickExit()
     {
-        // 유저 정보 초기화
-        UserInfo.myInfo.Clear();
-        DataManager.instance.users.Clear();
-        // 메인 씬 로드
-        await SceneManager.LoadSceneAsync("Main");
+        // 로비 복귀 패킷 전송
+        GamePacket packet = new GamePacket();
+        packet.ComeBackLobbyRequest = new C2SComeBackLobbyRequest();
+        SocketManager.instance.Send(packet);
     }
 }

@@ -12,6 +12,7 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using static UnityEngine.UIElements.UxmlAttributeDescription;
+using UnityEngine.Rendering;
 
 public class SocketManager : TCPSocketManagerBase<SocketManager>
 {
@@ -32,7 +33,18 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         // 캐릭터 정보 저장
         StorageManager.SaveCharacterInfos(response.Characters);
         // 로그인 처리
-        UIManager.Get<PopupLogin>().OnLoginEnd(response.Success, response.LastSelectedCharacter);
+
+        if (UIManager.IsOpened<UIMain>())
+        {
+            // 게임에서 로비로 돌아오는 경우
+            UserInfo.myInfo.SetCharacterRcode(response.LastSelectedCharacter);
+            UIManager.Get<UIMain>()?.UpdateCharacterImage(response.LastSelectedCharacter);
+        }
+        else
+        {
+            // 로그인 처리
+            UIManager.Get<PopupLogin>().OnLoginEnd(response.Success, response.LastSelectedCharacter);
+        }
     }
 
     /// <summary>
@@ -387,7 +399,6 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     /// <summary>
     /// 카드 효과 구현 로직 - 수정필요 (일단 UI표시 다시 한 번 더)
     /// </summary>
-    /// <param name="gamePacket"></param>
     public void CardEffectNotification(GamePacket gamePacket)
     {
         var response = gamePacket.UseCardNotification;
@@ -500,7 +511,7 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
                     UIGame.instance.SetBombButton(true);
                 else
                     UIGame.instance.SetBombButton(false);
-                
+
                 // 캐릭터 상태에 따른 처리
                 switch ((eCharacterState)users[i].characterData.StateInfo.State)
                 {
@@ -784,5 +795,37 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
         }
     }
 
+    /// <summary>
+    /// 로비 서버 복귀 응답 처리
+    /// </summary>
+    public async void ComeBackLobbyResponse(GamePacket gamePacket)
+    {
+        var response = gamePacket.ComeBackLobbyResponse;
+        var serverInfo = response.ServerInfo;
 
+        await Task.Delay(500);
+        Disconnect(false, false); // 게임 서버 연결 해제
+
+        // 유저 정보 초기화
+        UserInfo.myInfo.Clear();
+        DataManager.instance.users.Clear();
+
+        await Task.Delay(500);
+
+        Init(serverInfo.Host, serverInfo.Port); // 로비 서버 연결
+        Connect(async () =>
+        {
+            // 로비 서버 로그인 요청
+            GamePacket packet = new GamePacket();
+            packet.LoginRequest = new C2SLoginRequest
+            {
+                UserId = response.UserId,
+                Token = StorageManager.JWT
+            };
+            Send(packet);
+
+            // 메인 씬 로드
+            await SceneManager.LoadSceneAsync("Main");
+        });
+    }
 }
