@@ -32,7 +32,6 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
 
         // 캐릭터 정보 저장
         StorageManager.SaveCharacterInfos(response.Characters);
-        // 로그인 처리
 
         if (UIManager.IsOpened<UIMain>())
         {
