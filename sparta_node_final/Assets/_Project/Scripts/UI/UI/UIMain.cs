@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Ironcow;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -81,8 +80,16 @@ public class UIMain : UIListBase<ItemRoom>
     /// <summary>
     /// 캐릭터 선택 버튼 클릭
     /// </summary>
-    public void OnClickChatacter()
+    public void OnClickCharacter()
     {
         UIManager.Show<PopupCharacter>();
+    }
+
+    /// <summary>
+    /// 채팅 버튼 클릭
+    /// </summary>
+    public void OnClickChat()
+    {
+        UIManager.Show<PopupChat>();
     }
 }
