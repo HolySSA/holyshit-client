@@ -11,32 +11,112 @@ namespace Ironcow
         Dictionary<string, Queue<ObjectPoolBase>> pools = new Dictionary<string, Queue<ObjectPoolBase>>();
         public bool isInit = false;
 
+#if USE_ASYNC
         public async void Init()
         {
             foreach (var data in ObjectPoolDataSO.SharedInstance.objectPoolDatas)
             {
-#if USE_ASYNC
-                data.prefab = await ResourceManager.instance.LoadAsset<ObjectPoolBase>(data.rCode, eAddressableType.prefab);
-#elif USE_COROUTINE
-                ResourceManager.instance.LoadAsset<ObjectPoolBase>(data.rCode, eAddressableType.prefab, (obj) =>
+                data.prefab = Resources.Load<ObjectPoolBase>(data.rCode);
+                if (data.prefab == null)
                 {
-                    data.prefab = obj;
-                };
-#endif
-                data.parent = new GameObject(data.rCode + "parent").transform;
+                    Debug.LogError($"[PoolManager] Failed to load prefab for rCode: {data.rCode}");
+                    continue;
+                }
+
+                data.parent = new GameObject(data.rCode + "_Pool").transform;
                 data.parent.parent = transform;
+                // 풀 큐 초기화
                 Queue<ObjectPoolBase> queue = new Queue<ObjectPoolBase>();
                 pools.Add(data.rCode, queue);
+                // 초기 오브젝트 생성
                 for (int i = 0; i < data.count; i++)
                 {
                     var obj = Instantiate(data.prefab, data.parent);
-                    obj.name = obj.name.Replace("(Clone)", "");
+                    obj.name = data.rCode; 
+                    obj.SetActive(false);
+                    queue.Enqueue(obj);
+                }
+            }
+
+            isInit = true;
+            //Debug.Log("[PoolManager] All pools initialized successfully");
+        }
+#elif USE_COROUTINE
+        public void Init()
+        {
+            StartCoroutine(InitCoroutine());
+        }
+
+        private IEnumerator InitCoroutine()
+        {
+            foreach (var data in ObjectPoolDataSO.SharedInstance.objectPoolDatas)
+            {
+                // Resources에서 프리팹 로드
+                data.prefab = Resources.Load<ObjectPoolBase>(data.rCode);
+                if (data.prefab == null)
+                {
+                    Debug.LogError($"[PoolManager] Failed to load prefab for rCode: {data.rCode}");
+                    continue;
+                }
+
+                // 부모 오브젝트 생성
+                data.parent = new GameObject(data.rCode + "_Pool").transform;
+                data.parent.parent = transform;
+
+                // 풀 큐 초기화
+                Queue<ObjectPoolBase> queue = new Queue<ObjectPoolBase>();
+                pools.Add(data.rCode, queue);
+
+                // 초기 오브젝트 생성
+                for (int i = 0; i < data.count; i++)
+                {
+                    var obj = Instantiate(data.prefab, data.parent);
+                    obj.name = data.rCode;
+                    obj.SetActive(false);
+                    queue.Enqueue(obj);
+
+                    // 매 10개 생성마다 1프레임 대기
+                    if (i % 10 == 0)
+                        yield return null;
+                }
+            }
+            isInit = true;
+            //Debug.Log("[PoolManager] All pools initialized successfully");
+        }
+#else
+        public void Init()
+        {
+            foreach (var data in ObjectPoolDataSO.SharedInstance.objectPoolDatas)
+            {
+                // Resources에서 프리팹 로드
+                data.prefab = Resources.Load<ObjectPoolBase>(data.rCode);
+                if (data.prefab == null)
+                {
+                    Debug.LogError($"[PoolManager] Failed to load prefab for rCode: {data.rCode}");
+                    continue;
+                }
+
+                // 부모 오브젝트 생성
+                data.parent = new GameObject(data.rCode + "_Pool").transform;
+                data.parent.parent = transform;
+
+                // 풀 큐 초기화
+                Queue<ObjectPoolBase> queue = new Queue<ObjectPoolBase>();
+                pools.Add(data.rCode, queue);
+
+                // 초기 오브젝트 생성
+                for (int i = 0; i < data.count; i++)
+                {
+                    var obj = Instantiate(data.prefab, data.parent);
+                    obj.name = data.rCode;
                     obj.SetActive(false);
                     queue.Enqueue(obj);
                 }
             }
             isInit = true;
+            //Debug.Log("[PoolManager] All pools initialized successfully");
         }
+#endif
 
         public T Spawn<T>(string rcode, params object[] param) where T : ObjectPoolBase
         {

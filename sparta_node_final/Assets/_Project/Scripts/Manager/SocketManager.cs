@@ -176,6 +176,25 @@ public class SocketManager : TCPSocketManagerBase<SocketManager>
     }
 
     /// <summary>
+    /// 채팅 메시지 응답 처리
+    /// </summary>
+    public void ChatMessageResponse(GamePacket gamePacket)
+    {
+        var response = gamePacket.ChatMessageResponse;
+        if (response.Success)
+            UIManager.Get<PopupChat>()?.ClearChatInputField();
+    }
+
+    /// <summary>
+    /// 채팅 메시지 알림 처리
+    /// </summary>
+    public void ChatMessageNotification(GamePacket gamePacket)
+    {
+        var response = gamePacket.ChatMessageNotification;
+        UIManager.Get<PopupChat>()?.CreateChatMessage(response.Nickname, response.Message, response.Timestamp, response.MessageType);
+    }
+
+    /// <summary>
     /// 게임 준비 응답 처리
     /// </summary>
     public void GamePrepareResponse(GamePacket gamePacket)

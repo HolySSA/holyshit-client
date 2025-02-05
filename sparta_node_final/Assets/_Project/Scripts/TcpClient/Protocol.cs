@@ -79,178 +79,190 @@ public static partial class ProtocolReflection {
           "cXVlc3QSDgoGcm9vbUlkGAEgASgFInsKHFMyQ0dldFJvb21SZWFkeVN0YXRl",
           "UmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBInCgtyZWFkeVN0YXRlcxgCIAMo",
           "CzISLlJvb21Vc2VyUmVhZHlEYXRhEiEKCGZhaWxDb2RlGAMgASgOMg8uR2xv",
-          "YmFsRmFpbENvZGUiFwoVQzJTR2FtZVByZXBhcmVSZXF1ZXN0IkwKFlMyQ0dh",
-          "bWVQcmVwYXJlUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIhCghmYWlsQ29k",
-          "ZRgCIAEoDjIPLkdsb2JhbEZhaWxDb2RlIjUKGlMyQ0dhbWVQcmVwYXJlTm90",
-          "aWZpY2F0aW9uEhcKBHJvb20YASABKAsyCS5Sb29tRGF0YSIVChNDMlNHYW1l",
-          "U3RhcnRSZXF1ZXN0IkoKFFMyQ0dhbWVTdGFydFJlc3BvbnNlEg8KB3N1Y2Nl",
-          "c3MYASABKAgSIQoIZmFpbENvZGUYAiABKA4yDy5HbG9iYWxGYWlsQ29kZSI/",
-          "ChhTMkNHYW1lU3RhcnROb3RpZmljYXRpb24SIwoKc2VydmVySW5mbxgBIAEo",
-          "CzIPLlNlcnZlckluZm9EYXRhIlYKGEMyU0dhbWVTZXJ2ZXJJbml0UmVxdWVz",
-          "dBIOCgZ1c2VySWQYASABKAUSDQoFdG9rZW4YAiABKAkSGwoIcm9vbURhdGEY",
-          "AyABKAsyCS5Sb29tRGF0YSJPChlTMkNHYW1lU2VydmVySW5pdFJlc3BvbnNl",
-          "Eg8KB3N1Y2Nlc3MYASABKAgSIQoIZmFpbENvZGUYAiABKA4yDy5HbG9iYWxG",
-          "YWlsQ29kZSKQAQodUzJDR2FtZVNlcnZlckluaXROb3RpZmljYXRpb24SIQoJ",
-          "Z2FtZVN0YXRlGAEgASgLMg4uR2FtZVN0YXRlRGF0YRIYCgV1c2VycxgCIAMo",
-          "CzIJLlVzZXJEYXRhEjIKEmNoYXJhY3RlclBvc2l0aW9ucxgDIAMoCzIWLkNo",
-          "YXJhY3RlclBvc2l0aW9uRGF0YSIwChhDMlNQb3NpdGlvblVwZGF0ZVJlcXVl",
-          "c3QSCQoBeBgBIAEoARIJCgF5GAIgASgBIk8KGVMyQ1Bvc2l0aW9uVXBkYXRl",
-          "UmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIhCghmYWlsQ29kZRgCIAEoDjIP",
-          "Lkdsb2JhbEZhaWxDb2RlIlMKHVMyQ1Bvc2l0aW9uVXBkYXRlTm90aWZpY2F0",
-          "aW9uEjIKEmNoYXJhY3RlclBvc2l0aW9ucxgBIAMoCzIWLkNoYXJhY3RlclBv",
-          "c2l0aW9uRGF0YSJGChFDMlNVc2VDYXJkUmVxdWVzdBIbCghjYXJkVHlwZRgB",
-          "IAEoDjIJLkNhcmRUeXBlEhQKDHRhcmdldFVzZXJJZBgCIAEoBSJIChJTMkNV",
-          "c2VDYXJkUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIhCghmYWlsQ29kZRgC",
-          "IAEoDjIPLkdsb2JhbEZhaWxDb2RlIlsKFlMyQ1VzZUNhcmROb3RpZmljYXRp",
-          "b24SGwoIY2FyZFR5cGUYASABKA4yCS5DYXJkVHlwZRIOCgZ1c2VySWQYAiAB",
-          "KAUSFAoMdGFyZ2V0VXNlcklkGAMgASgFIkcKGFMyQ0VxdWlwQ2FyZE5vdGlm",
-          "aWNhdGlvbhIbCghjYXJkVHlwZRgBIAEoDjIJLkNhcmRUeXBlEg4KBnVzZXJJ",
-          "ZBgCIAEoBSJZChlTMkNDYXJkRWZmZWN0Tm90aWZpY2F0aW9uEhsKCGNhcmRU",
-          "eXBlGAEgASgOMgkuQ2FyZFR5cGUSDgoGdXNlcklkGAIgASgFEg8KB3N1Y2Nl",
-          "c3MYAyABKAgiTAoZUzJDRmxlYU1hcmtldE5vdGlmaWNhdGlvbhIcCgljYXJk",
-          "VHlwZXMYASADKA4yCS5DYXJkVHlwZRIRCglwaWNrSW5kZXgYAiADKAUiLQoY",
-          "QzJTRmxlYU1hcmtldFBpY2tSZXF1ZXN0EhEKCXBpY2tJbmRleBgBIAEoBSJP",
-          "ChlTMkNGbGVhTWFya2V0UGlja1Jlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgS",
-          "IQoIZmFpbENvZGUYAiABKA4yDy5HbG9iYWxGYWlsQ29kZSI0ChlTMkNVc2Vy",
-          "VXBkYXRlTm90aWZpY2F0aW9uEhcKBHVzZXIYASADKAsyCS5Vc2VyRGF0YSKE",
-          "AQoaUzJDUGhhc2VVcGRhdGVOb3RpZmljYXRpb24SHQoJcGhhc2VUeXBlGAEg",
-          "ASgOMgouUGhhc2VUeXBlEhMKC25leHRQaGFzZUF0GAIgASgDEjIKEmNoYXJh",
-          "Y3RlclBvc2l0aW9ucxgDIAMoCzIWLkNoYXJhY3RlclBvc2l0aW9uRGF0YSI5",
-          "ChJDMlNSZWFjdGlvblJlcXVlc3QSIwoMcmVhY3Rpb25UeXBlGAEgASgOMg0u",
-          "UmVhY3Rpb25UeXBlIkkKE1MyQ1JlYWN0aW9uUmVzcG9uc2USDwoHc3VjY2Vz",
-          "cxgBIAEoCBIhCghmYWlsQ29kZRgCIAEoDjIPLkdsb2JhbEZhaWxDb2RlIjgK",
-          "FUMyU0Rlc3Ryb3lDYXJkUmVxdWVzdBIfCgxkZXN0cm95Q2FyZHMYASADKAsy",
-          "CS5DYXJkRGF0YSI2ChZTMkNEZXN0cm95Q2FyZFJlc3BvbnNlEhwKCWhhbmRD",
-          "YXJkcxgBIAMoCzIJLkNhcmREYXRhIkQKFlMyQ0dhbWVFbmROb3RpZmljYXRp",
-          "b24SDwoHd2lubmVycxgBIAMoBRIZCgd3aW5UeXBlGAIgASgOMgguV2luVHlw",
-          "ZSJeChRDMlNDYXJkU2VsZWN0UmVxdWVzdBIjCgpzZWxlY3RUeXBlGAEgASgO",
-          "Mg8uU2VsZWN0Q2FyZFR5cGUSIQoOc2VsZWN0Q2FyZFR5cGUYAiABKA4yCS5D",
-          "YXJkVHlwZSJLChVTMkNDYXJkU2VsZWN0UmVzcG9uc2USDwoHc3VjY2VzcxgB",
-          "IAEoCBIhCghmYWlsQ29kZRgCIAEoDjIPLkdsb2JhbEZhaWxDb2RlIk8KFEMy",
-          "U1Bhc3NEZWJ1ZmZSZXF1ZXN0EhQKDHRhcmdldFVzZXJJZBgBIAEoBRIhCg5k",
-          "ZWJ1ZmZDYXJkVHlwZRgCIAEoDjIJLkNhcmRUeXBlIksKFVMyQ1Bhc3NEZWJ1",
-          "ZmZSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIEiEKCGZhaWxDb2RlGAIgASgO",
-          "Mg8uR2xvYmFsRmFpbENvZGUiTwoWUzJDV2FybmluZ05vdGlmaWNhdGlvbhIh",
-          "Cgt3YXJuaW5nVHlwZRgBIAEoDjIMLldhcm5pbmdUeXBlEhIKCmV4cGVjdGVk",
-          "QXQYAiABKAMiUQoYUzJDQW5pbWF0aW9uTm90aWZpY2F0aW9uEg4KBnVzZXJJ",
-          "ZBgBIAEoBRIlCg1hbmltYXRpb25UeXBlGAIgASgOMg4uQW5pbWF0aW9uVHlw",
-          "ZSIZChdDMlNDb21lQmFja0xvYmJ5UmVxdWVzdCJPChhTMkNDb21lQmFja0xv",
-          "YmJ5UmVzcG9uc2USDgoGdXNlcklkGAEgASgFEiMKCnNlcnZlckluZm8YAiAB",
-          "KAsyDy5TZXJ2ZXJJbmZvRGF0YSLDGAoKR2FtZVBhY2tldBIoCgxsb2dpblJl",
-          "cXVlc3QYASABKAsyEC5DMlNMb2dpblJlcXVlc3RIABIqCg1sb2dpblJlc3Bv",
-          "bnNlGAIgASgLMhEuUzJDTG9naW5SZXNwb25zZUgAEjwKFnNlbGVjdENoYXJh",
-          "Y3RlclJlcXVlc3QYAyABKAsyGi5DMlNTZWxlY3RDaGFyYWN0ZXJSZXF1ZXN0",
-          "SAASPgoXc2VsZWN0Q2hhcmFjdGVyUmVzcG9uc2UYBCABKAsyGy5TMkNTZWxl",
-          "Y3RDaGFyYWN0ZXJSZXNwb25zZUgAEjIKEWNyZWF0ZVJvb21SZXF1ZXN0GAUg",
-          "ASgLMhUuQzJTQ3JlYXRlUm9vbVJlcXVlc3RIABI0ChJjcmVhdGVSb29tUmVz",
-          "cG9uc2UYBiABKAsyFi5TMkNDcmVhdGVSb29tUmVzcG9uc2VIABI0ChJnZXRS",
-          "b29tTGlzdFJlcXVlc3QYByABKAsyFi5DMlNHZXRSb29tTGlzdFJlcXVlc3RI",
-          "ABI2ChNnZXRSb29tTGlzdFJlc3BvbnNlGAggASgLMhcuUzJDR2V0Um9vbUxp",
-          "c3RSZXNwb25zZUgAEi4KD2pvaW5Sb29tUmVxdWVzdBgJIAEoCzITLkMyU0pv",
-          "aW5Sb29tUmVxdWVzdEgAEjAKEGpvaW5Sb29tUmVzcG9uc2UYCiABKAsyFC5T",
-          "MkNKb2luUm9vbVJlc3BvbnNlSAASOgoVam9pblJhbmRvbVJvb21SZXF1ZXN0",
-          "GAsgASgLMhkuQzJTSm9pblJhbmRvbVJvb21SZXF1ZXN0SAASPAoWam9pblJh",
-          "bmRvbVJvb21SZXNwb25zZRgMIAEoCzIaLlMyQ0pvaW5SYW5kb21Sb29tUmVz",
-          "cG9uc2VIABI4ChRqb2luUm9vbU5vdGlmaWNhdGlvbhgNIAEoCzIYLlMyQ0pv",
-          "aW5Sb29tTm90aWZpY2F0aW9uSAASMAoQbGVhdmVSb29tUmVxdWVzdBgOIAEo",
-          "CzIULkMyU0xlYXZlUm9vbVJlcXVlc3RIABIyChFsZWF2ZVJvb21SZXNwb25z",
-          "ZRgPIAEoCzIVLlMyQ0xlYXZlUm9vbVJlc3BvbnNlSAASOgoVbGVhdmVSb29t",
-          "Tm90aWZpY2F0aW9uGBAgASgLMhkuUzJDTGVhdmVSb29tTm90aWZpY2F0aW9u",
-          "SAASMAoQcm9vbVJlYWR5UmVxdWVzdBgRIAEoCzIULkMyU1Jvb21SZWFkeVJl",
-          "cXVlc3RIABIyChFyb29tUmVhZHlSZXNwb25zZRgSIAEoCzIVLlMyQ1Jvb21S",
-          "ZWFkeVJlc3BvbnNlSAASOgoVcm9vbVJlYWR5Tm90aWZpY2F0aW9uGBMgASgL",
-          "MhkuUzJDUm9vbVJlYWR5Tm90aWZpY2F0aW9uSAASQAoYZ2V0Um9vbVJlYWR5",
-          "U3RhdGVSZXF1ZXN0GBQgASgLMhwuQzJTR2V0Um9vbVJlYWR5U3RhdGVSZXF1",
-          "ZXN0SAASQgoZZ2V0Um9vbVJlYWR5U3RhdGVSZXNwb25zZRgVIAEoCzIdLlMy",
-          "Q0dldFJvb21SZWFkeVN0YXRlUmVzcG9uc2VIABI0ChJnYW1lUHJlcGFyZVJl",
-          "cXVlc3QYFiABKAsyFi5DMlNHYW1lUHJlcGFyZVJlcXVlc3RIABI2ChNnYW1l",
-          "UHJlcGFyZVJlc3BvbnNlGBcgASgLMhcuUzJDR2FtZVByZXBhcmVSZXNwb25z",
-          "ZUgAEj4KF2dhbWVQcmVwYXJlTm90aWZpY2F0aW9uGBggASgLMhsuUzJDR2Ft",
-          "ZVByZXBhcmVOb3RpZmljYXRpb25IABIwChBnYW1lU3RhcnRSZXF1ZXN0GBkg",
-          "ASgLMhQuQzJTR2FtZVN0YXJ0UmVxdWVzdEgAEjIKEWdhbWVTdGFydFJlc3Bv",
-          "bnNlGBogASgLMhUuUzJDR2FtZVN0YXJ0UmVzcG9uc2VIABI6ChVnYW1lU3Rh",
-          "cnROb3RpZmljYXRpb24YGyABKAsyGS5TMkNHYW1lU3RhcnROb3RpZmljYXRp",
-          "b25IABI6ChVnYW1lU2VydmVySW5pdFJlcXVlc3QYZCABKAsyGS5DMlNHYW1l",
-          "U2VydmVySW5pdFJlcXVlc3RIABI8ChZnYW1lU2VydmVySW5pdFJlc3BvbnNl",
-          "GGUgASgLMhouUzJDR2FtZVNlcnZlckluaXRSZXNwb25zZUgAEkQKGmdhbWVT",
-          "ZXJ2ZXJJbml0Tm90aWZpY2F0aW9uGGYgASgLMh4uUzJDR2FtZVNlcnZlcklu",
-          "aXROb3RpZmljYXRpb25IABI6ChVwb3NpdGlvblVwZGF0ZVJlcXVlc3QYZyAB",
-          "KAsyGS5DMlNQb3NpdGlvblVwZGF0ZVJlcXVlc3RIABJEChpwb3NpdGlvblVw",
-          "ZGF0ZU5vdGlmaWNhdGlvbhhoIAEoCzIeLlMyQ1Bvc2l0aW9uVXBkYXRlTm90",
-          "aWZpY2F0aW9uSAASLAoOdXNlQ2FyZFJlcXVlc3QYaSABKAsyEi5DMlNVc2VD",
-          "YXJkUmVxdWVzdEgAEi4KD3VzZUNhcmRSZXNwb25zZRhqIAEoCzITLlMyQ1Vz",
-          "ZUNhcmRSZXNwb25zZUgAEjYKE3VzZUNhcmROb3RpZmljYXRpb24YayABKAsy",
-          "Fy5TMkNVc2VDYXJkTm90aWZpY2F0aW9uSAASOgoVZXF1aXBDYXJkTm90aWZp",
-          "Y2F0aW9uGGwgASgLMhkuUzJDRXF1aXBDYXJkTm90aWZpY2F0aW9uSAASPAoW",
-          "Y2FyZEVmZmVjdE5vdGlmaWNhdGlvbhhtIAEoCzIaLlMyQ0NhcmRFZmZlY3RO",
-          "b3RpZmljYXRpb25IABI8ChZmbGVhTWFya2V0Tm90aWZpY2F0aW9uGG4gASgL",
-          "MhouUzJDRmxlYU1hcmtldE5vdGlmaWNhdGlvbkgAEjoKFWZsZWFNYXJrZXRQ",
-          "aWNrUmVxdWVzdBhvIAEoCzIZLkMyU0ZsZWFNYXJrZXRQaWNrUmVxdWVzdEgA",
-          "EjwKFmZsZWFNYXJrZXRQaWNrUmVzcG9uc2UYcCABKAsyGi5TMkNGbGVhTWFy",
-          "a2V0UGlja1Jlc3BvbnNlSAASPAoWdXNlclVwZGF0ZU5vdGlmaWNhdGlvbhhx",
-          "IAEoCzIaLlMyQ1VzZXJVcGRhdGVOb3RpZmljYXRpb25IABI+ChdwaGFzZVVw",
-          "ZGF0ZU5vdGlmaWNhdGlvbhhyIAEoCzIbLlMyQ1BoYXNlVXBkYXRlTm90aWZp",
-          "Y2F0aW9uSAASLgoPcmVhY3Rpb25SZXF1ZXN0GHMgASgLMhMuQzJTUmVhY3Rp",
-          "b25SZXF1ZXN0SAASMAoQcmVhY3Rpb25SZXNwb25zZRh0IAEoCzIULlMyQ1Jl",
-          "YWN0aW9uUmVzcG9uc2VIABI0ChJkZXN0cm95Q2FyZFJlcXVlc3QYdSABKAsy",
-          "Fi5DMlNEZXN0cm95Q2FyZFJlcXVlc3RIABI2ChNkZXN0cm95Q2FyZFJlc3Bv",
-          "bnNlGHYgASgLMhcuUzJDRGVzdHJveUNhcmRSZXNwb25zZUgAEjYKE2dhbWVF",
-          "bmROb3RpZmljYXRpb24YdyABKAsyFy5TMkNHYW1lRW5kTm90aWZpY2F0aW9u",
-          "SAASMgoRY2FyZFNlbGVjdFJlcXVlc3QYeCABKAsyFS5DMlNDYXJkU2VsZWN0",
-          "UmVxdWVzdEgAEjQKEmNhcmRTZWxlY3RSZXNwb25zZRh5IAEoCzIWLlMyQ0Nh",
-          "cmRTZWxlY3RSZXNwb25zZUgAEjIKEXBhc3NEZWJ1ZmZSZXF1ZXN0GHogASgL",
-          "MhUuQzJTUGFzc0RlYnVmZlJlcXVlc3RIABI0ChJwYXNzRGVidWZmUmVzcG9u",
-          "c2UYeyABKAsyFi5TMkNQYXNzRGVidWZmUmVzcG9uc2VIABI2ChN3YXJuaW5n",
-          "Tm90aWZpY2F0aW9uGHwgASgLMhcuUzJDV2FybmluZ05vdGlmaWNhdGlvbkgA",
-          "EjoKFWFuaW1hdGlvbk5vdGlmaWNhdGlvbhh9IAEoCzIZLlMyQ0FuaW1hdGlv",
-          "bk5vdGlmaWNhdGlvbkgAEjkKFGNvbWVCYWNrTG9iYnlSZXF1ZXN0GMYBIAEo",
-          "CzIYLkMyU0NvbWVCYWNrTG9iYnlSZXF1ZXN0SAASOwoVY29tZUJhY2tMb2Ji",
-          "eVJlc3BvbnNlGMcBIAEoCzIZLlMyQ0NvbWVCYWNrTG9iYnlSZXNwb25zZUgA",
-          "QgkKB3BheWxvYWQqjwMKDkdsb2JhbEZhaWxDb2RlEhEKDU5PTkVfRkFJTENP",
-          "REUQABIRCg1VTktOT1dOX0VSUk9SEAESEwoPSU5WQUxJRF9SRVFVRVNUEAIS",
-          "GQoVQVVUSEVOVElDQVRJT05fRkFJTEVEEAMSFgoSQ1JFQVRFX1JPT01fRkFJ",
-          "TEVEEAQSFAoQSk9JTl9ST09NX0ZBSUxFRBAFEhUKEUxFQVZFX1JPT01fRkFJ",
-          "TEVEEAYSEwoPUkVHSVNURVJfRkFJTEVEEAcSEgoOUk9PTV9OT1RfRk9VTkQQ",
-          "CBIXChNDSEFSQUNURVJfTk9UX0ZPVU5EEAkSGQoVQ0hBUkFDVEVSX1NUQVRF",
-          "X0VSUk9SEAoSFQoRQ0hBUkFDVEVSX05PX0NBUkQQCxIWChJJTlZBTElEX1JP",
-          "T01fU1RBVEUQDBISCg5OT1RfUk9PTV9PV05FUhANEhYKEkFMUkVBRFlfVVNF",
-          "RF9CQkFORxAOEhEKDUlOVkFMSURfUEhBU0UQDxIXChNDSEFSQUNURVJfQ09O",
-          "VEFJTkVEEBAqLgoLV2FybmluZ1R5cGUSDgoKTk9fV0FSTklORxAAEg8KC0JP",
-          "TUJfV0FOSU5HEAEqSwoHV2luVHlwZRIcChhUQVJHRVRfQU5EX0JPRFlHVUFS",
-          "RF9XSU4QABIOCgpISVRNQU5fV0lOEAESEgoOUFNZQ0hPUEFUSF9XSU4QAiqT",
-          "AQoNQ2hhcmFjdGVyVHlwZRISCg5OT05FX0NIQVJBQ1RFUhAAEgcKA1JFRBAB",
-          "EgkKBVNIQVJLEAMSCgoGTUFMQU5HEAUSCgoGRlJPR0dZEAcSCAoEUElOSxAI",
-          "EhAKDFNXSU1fR0xBU1NFUxAJEggKBE1BU0sQChIMCghESU5PU0FVUhAMEg4K",
-          "ClBJTktfU0xJTUUQDSrqAgoSQ2hhcmFjdGVyU3RhdGVUeXBlEhgKFE5PTkVf",
-          "Q0hBUkFDVEVSX1NUQVRFEAASEQoNQkJBTkdfU0hPT1RFUhABEhAKDEJCQU5H",
-          "X1RBUkdFVBACEhUKEURFQVRIX01BVENIX1NUQVRFEAMSGgoWREVBVEhfTUFU",
-          "Q0hfVFVSTl9TVEFURRAEEhQKEEZMRUFfTUFSS0VUX1RVUk4QBRIUChBGTEVB",
-          "X01BUktFVF9XQUlUEAYSFQoRR1VFUlJJTExBX1NIT09URVIQBxIUChBHVUVS",
-          "UklMTEFfVEFSR0VUEAgSFQoRQklHX0JCQU5HX1NIT09URVIQCRIUChBCSUdf",
-          "QkJBTkdfVEFSR0VUEAoSDQoJQUJTT1JCSU5HEAsSEQoNQUJTT1JCX1RBUkdF",
-          "VBAMEhEKDUhBTExVQ0lOQVRJTkcQDRIYChRIQUxMVUNJTkFUSU9OX1RBUkdF",
-          "VBAOEg0KCUNPTlRBSU5FRBAPKoIDCghDYXJkVHlwZRIICgROT05FEAASCQoF",
-          "QkJBTkcQARINCglCSUdfQkJBTkcQAhIKCgZTSElFTEQQAxILCgdWQUNDSU5F",
-          "EAQSDAoIQ0FMTF8xMTkQBRIPCgtERUFUSF9NQVRDSBAGEg0KCUdVRVJSSUxM",
-          "QRAHEgoKBkFCU09SQhAIEhEKDUhBTExVQ0lOQVRJT04QCRIPCgtGTEVBX01B",
-          "UktFVBAKEhMKD01BVFVSRURfU0FWSU5HUxALEg8KC1dJTl9MT1RURVJZEAwS",
-          "DgoKU05JUEVSX0dVThANEgwKCEhBTkRfR1VOEA4SEAoMREVTRVJUX0VBR0xF",
-          "EA8SDgoKQVVUT19SSUZMRRAQEhEKDUxBU0VSX1BPSU5URVIQERIJCgVSQURB",
-          "UhASEg8KC0FVVE9fU0hJRUxEEBMSEAoMU1RFQUxUSF9TVUlUEBQSFAoQQ09O",
-          "VEFJTk1FTlRfVU5JVBAVEhQKEFNBVEVMTElURV9UQVJHRVQQFhIICgRCT01C",
-          "EBcqUAoIUm9sZVR5cGUSDQoJTk9ORV9ST0xFEAASCgoGVEFSR0VUEAESDQoJ",
-          "Qk9EWUdVQVJEEAISCgoGSElUTUFOEAMSDgoKUFNZQ0hPUEFUSBAEKjIKDVJv",
-          "b21TdGF0ZVR5cGUSCAoEV0FJVBAAEgsKB1BSRVBBUkUQARIKCgZJTkdBTUUQ",
-          "Aio6CglQaGFzZVR5cGUSDgoKTk9ORV9QSEFTRRAAEgcKA0RBWRABEgsKB0VW",
-          "RU5JTkcQAhIHCgNFTkQQAyozCgxSZWFjdGlvblR5cGUSEQoNTk9ORV9SRUFD",
-          "VElPThAAEhAKDE5PVF9VU0VfQ0FSRBABKj0KDlNlbGVjdENhcmRUeXBlEggK",
-          "BEhBTkQQABIJCgVFUVVJUBABEgoKBldFQVBPThACEgoKBkRFQlVGRhADKmsK",
-          "DUFuaW1hdGlvblR5cGUSEAoMTk9fQU5JTUFUSU9OEAASHgoaU0FURUxMSVRF",
-          "X1RBUkdFVF9BTklNQVRJT04QARISCg5CT01CX0FOSU1BVElPThACEhQKEFNI",
-          "SUVMRF9BTklNQVRJT04QA2IGcHJvdG8z"));
+          "YmFsRmFpbENvZGUiTwoVQzJTQ2hhdE1lc3NhZ2VSZXF1ZXN0Eg8KB21lc3Nh",
+          "Z2UYASABKAkSJQoLbWVzc2FnZVR5cGUYAiABKA4yEC5DaGF0TWVzc2FnZVR5",
+          "cGUiTAoWUzJDQ2hhdE1lc3NhZ2VSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgI",
+          "EiEKCGZhaWxDb2RlGAIgASgOMg8uR2xvYmFsRmFpbENvZGUieQoaUzJDQ2hh",
+          "dE1lc3NhZ2VOb3RpZmljYXRpb24SEAoIbmlja25hbWUYASABKAkSDwoHbWVz",
+          "c2FnZRgCIAEoCRIRCgl0aW1lc3RhbXAYAyABKAMSJQoLbWVzc2FnZVR5cGUY",
+          "BCABKA4yEC5DaGF0TWVzc2FnZVR5cGUiFwoVQzJTR2FtZVByZXBhcmVSZXF1",
+          "ZXN0IkwKFlMyQ0dhbWVQcmVwYXJlUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEo",
+          "CBIhCghmYWlsQ29kZRgCIAEoDjIPLkdsb2JhbEZhaWxDb2RlIjUKGlMyQ0dh",
+          "bWVQcmVwYXJlTm90aWZpY2F0aW9uEhcKBHJvb20YASABKAsyCS5Sb29tRGF0",
+          "YSIVChNDMlNHYW1lU3RhcnRSZXF1ZXN0IkoKFFMyQ0dhbWVTdGFydFJlc3Bv",
+          "bnNlEg8KB3N1Y2Nlc3MYASABKAgSIQoIZmFpbENvZGUYAiABKA4yDy5HbG9i",
+          "YWxGYWlsQ29kZSI/ChhTMkNHYW1lU3RhcnROb3RpZmljYXRpb24SIwoKc2Vy",
+          "dmVySW5mbxgBIAEoCzIPLlNlcnZlckluZm9EYXRhIlYKGEMyU0dhbWVTZXJ2",
+          "ZXJJbml0UmVxdWVzdBIOCgZ1c2VySWQYASABKAUSDQoFdG9rZW4YAiABKAkS",
+          "GwoIcm9vbURhdGEYAyABKAsyCS5Sb29tRGF0YSJPChlTMkNHYW1lU2VydmVy",
+          "SW5pdFJlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgSIQoIZmFpbENvZGUYAiAB",
+          "KA4yDy5HbG9iYWxGYWlsQ29kZSKQAQodUzJDR2FtZVNlcnZlckluaXROb3Rp",
+          "ZmljYXRpb24SIQoJZ2FtZVN0YXRlGAEgASgLMg4uR2FtZVN0YXRlRGF0YRIY",
+          "CgV1c2VycxgCIAMoCzIJLlVzZXJEYXRhEjIKEmNoYXJhY3RlclBvc2l0aW9u",
+          "cxgDIAMoCzIWLkNoYXJhY3RlclBvc2l0aW9uRGF0YSIwChhDMlNQb3NpdGlv",
+          "blVwZGF0ZVJlcXVlc3QSCQoBeBgBIAEoARIJCgF5GAIgASgBIk8KGVMyQ1Bv",
+          "c2l0aW9uVXBkYXRlUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIhCghmYWls",
+          "Q29kZRgCIAEoDjIPLkdsb2JhbEZhaWxDb2RlIlMKHVMyQ1Bvc2l0aW9uVXBk",
+          "YXRlTm90aWZpY2F0aW9uEjIKEmNoYXJhY3RlclBvc2l0aW9ucxgBIAMoCzIW",
+          "LkNoYXJhY3RlclBvc2l0aW9uRGF0YSJGChFDMlNVc2VDYXJkUmVxdWVzdBIb",
+          "CghjYXJkVHlwZRgBIAEoDjIJLkNhcmRUeXBlEhQKDHRhcmdldFVzZXJJZBgC",
+          "IAEoBSJIChJTMkNVc2VDYXJkUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIh",
+          "CghmYWlsQ29kZRgCIAEoDjIPLkdsb2JhbEZhaWxDb2RlIlsKFlMyQ1VzZUNh",
+          "cmROb3RpZmljYXRpb24SGwoIY2FyZFR5cGUYASABKA4yCS5DYXJkVHlwZRIO",
+          "CgZ1c2VySWQYAiABKAUSFAoMdGFyZ2V0VXNlcklkGAMgASgFIkcKGFMyQ0Vx",
+          "dWlwQ2FyZE5vdGlmaWNhdGlvbhIbCghjYXJkVHlwZRgBIAEoDjIJLkNhcmRU",
+          "eXBlEg4KBnVzZXJJZBgCIAEoBSJZChlTMkNDYXJkRWZmZWN0Tm90aWZpY2F0",
+          "aW9uEhsKCGNhcmRUeXBlGAEgASgOMgkuQ2FyZFR5cGUSDgoGdXNlcklkGAIg",
+          "ASgFEg8KB3N1Y2Nlc3MYAyABKAgiTAoZUzJDRmxlYU1hcmtldE5vdGlmaWNh",
+          "dGlvbhIcCgljYXJkVHlwZXMYASADKA4yCS5DYXJkVHlwZRIRCglwaWNrSW5k",
+          "ZXgYAiADKAUiLQoYQzJTRmxlYU1hcmtldFBpY2tSZXF1ZXN0EhEKCXBpY2tJ",
+          "bmRleBgBIAEoBSJPChlTMkNGbGVhTWFya2V0UGlja1Jlc3BvbnNlEg8KB3N1",
+          "Y2Nlc3MYASABKAgSIQoIZmFpbENvZGUYAiABKA4yDy5HbG9iYWxGYWlsQ29k",
+          "ZSI0ChlTMkNVc2VyVXBkYXRlTm90aWZpY2F0aW9uEhcKBHVzZXIYASADKAsy",
+          "CS5Vc2VyRGF0YSKEAQoaUzJDUGhhc2VVcGRhdGVOb3RpZmljYXRpb24SHQoJ",
+          "cGhhc2VUeXBlGAEgASgOMgouUGhhc2VUeXBlEhMKC25leHRQaGFzZUF0GAIg",
+          "ASgDEjIKEmNoYXJhY3RlclBvc2l0aW9ucxgDIAMoCzIWLkNoYXJhY3RlclBv",
+          "c2l0aW9uRGF0YSI5ChJDMlNSZWFjdGlvblJlcXVlc3QSIwoMcmVhY3Rpb25U",
+          "eXBlGAEgASgOMg0uUmVhY3Rpb25UeXBlIkkKE1MyQ1JlYWN0aW9uUmVzcG9u",
+          "c2USDwoHc3VjY2VzcxgBIAEoCBIhCghmYWlsQ29kZRgCIAEoDjIPLkdsb2Jh",
+          "bEZhaWxDb2RlIjgKFUMyU0Rlc3Ryb3lDYXJkUmVxdWVzdBIfCgxkZXN0cm95",
+          "Q2FyZHMYASADKAsyCS5DYXJkRGF0YSI2ChZTMkNEZXN0cm95Q2FyZFJlc3Bv",
+          "bnNlEhwKCWhhbmRDYXJkcxgBIAMoCzIJLkNhcmREYXRhIkQKFlMyQ0dhbWVF",
+          "bmROb3RpZmljYXRpb24SDwoHd2lubmVycxgBIAMoBRIZCgd3aW5UeXBlGAIg",
+          "ASgOMgguV2luVHlwZSJeChRDMlNDYXJkU2VsZWN0UmVxdWVzdBIjCgpzZWxl",
+          "Y3RUeXBlGAEgASgOMg8uU2VsZWN0Q2FyZFR5cGUSIQoOc2VsZWN0Q2FyZFR5",
+          "cGUYAiABKA4yCS5DYXJkVHlwZSJLChVTMkNDYXJkU2VsZWN0UmVzcG9uc2US",
+          "DwoHc3VjY2VzcxgBIAEoCBIhCghmYWlsQ29kZRgCIAEoDjIPLkdsb2JhbEZh",
+          "aWxDb2RlIk8KFEMyU1Bhc3NEZWJ1ZmZSZXF1ZXN0EhQKDHRhcmdldFVzZXJJ",
+          "ZBgBIAEoBRIhCg5kZWJ1ZmZDYXJkVHlwZRgCIAEoDjIJLkNhcmRUeXBlIksK",
+          "FVMyQ1Bhc3NEZWJ1ZmZSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIEiEKCGZh",
+          "aWxDb2RlGAIgASgOMg8uR2xvYmFsRmFpbENvZGUiTwoWUzJDV2FybmluZ05v",
+          "dGlmaWNhdGlvbhIhCgt3YXJuaW5nVHlwZRgBIAEoDjIMLldhcm5pbmdUeXBl",
+          "EhIKCmV4cGVjdGVkQXQYAiABKAMiUQoYUzJDQW5pbWF0aW9uTm90aWZpY2F0",
+          "aW9uEg4KBnVzZXJJZBgBIAEoBRIlCg1hbmltYXRpb25UeXBlGAIgASgOMg4u",
+          "QW5pbWF0aW9uVHlwZSIZChdDMlNDb21lQmFja0xvYmJ5UmVxdWVzdCJPChhT",
+          "MkNDb21lQmFja0xvYmJ5UmVzcG9uc2USDgoGdXNlcklkGAEgASgFEiMKCnNl",
+          "cnZlckluZm8YAiABKAsyDy5TZXJ2ZXJJbmZvRGF0YSLxGQoKR2FtZVBhY2tl",
+          "dBIoCgxsb2dpblJlcXVlc3QYASABKAsyEC5DMlNMb2dpblJlcXVlc3RIABIq",
+          "Cg1sb2dpblJlc3BvbnNlGAIgASgLMhEuUzJDTG9naW5SZXNwb25zZUgAEjwK",
+          "FnNlbGVjdENoYXJhY3RlclJlcXVlc3QYAyABKAsyGi5DMlNTZWxlY3RDaGFy",
+          "YWN0ZXJSZXF1ZXN0SAASPgoXc2VsZWN0Q2hhcmFjdGVyUmVzcG9uc2UYBCAB",
+          "KAsyGy5TMkNTZWxlY3RDaGFyYWN0ZXJSZXNwb25zZUgAEjIKEWNyZWF0ZVJv",
+          "b21SZXF1ZXN0GAUgASgLMhUuQzJTQ3JlYXRlUm9vbVJlcXVlc3RIABI0ChJj",
+          "cmVhdGVSb29tUmVzcG9uc2UYBiABKAsyFi5TMkNDcmVhdGVSb29tUmVzcG9u",
+          "c2VIABI0ChJnZXRSb29tTGlzdFJlcXVlc3QYByABKAsyFi5DMlNHZXRSb29t",
+          "TGlzdFJlcXVlc3RIABI2ChNnZXRSb29tTGlzdFJlc3BvbnNlGAggASgLMhcu",
+          "UzJDR2V0Um9vbUxpc3RSZXNwb25zZUgAEi4KD2pvaW5Sb29tUmVxdWVzdBgJ",
+          "IAEoCzITLkMyU0pvaW5Sb29tUmVxdWVzdEgAEjAKEGpvaW5Sb29tUmVzcG9u",
+          "c2UYCiABKAsyFC5TMkNKb2luUm9vbVJlc3BvbnNlSAASOgoVam9pblJhbmRv",
+          "bVJvb21SZXF1ZXN0GAsgASgLMhkuQzJTSm9pblJhbmRvbVJvb21SZXF1ZXN0",
+          "SAASPAoWam9pblJhbmRvbVJvb21SZXNwb25zZRgMIAEoCzIaLlMyQ0pvaW5S",
+          "YW5kb21Sb29tUmVzcG9uc2VIABI4ChRqb2luUm9vbU5vdGlmaWNhdGlvbhgN",
+          "IAEoCzIYLlMyQ0pvaW5Sb29tTm90aWZpY2F0aW9uSAASMAoQbGVhdmVSb29t",
+          "UmVxdWVzdBgOIAEoCzIULkMyU0xlYXZlUm9vbVJlcXVlc3RIABIyChFsZWF2",
+          "ZVJvb21SZXNwb25zZRgPIAEoCzIVLlMyQ0xlYXZlUm9vbVJlc3BvbnNlSAAS",
+          "OgoVbGVhdmVSb29tTm90aWZpY2F0aW9uGBAgASgLMhkuUzJDTGVhdmVSb29t",
+          "Tm90aWZpY2F0aW9uSAASMAoQcm9vbVJlYWR5UmVxdWVzdBgRIAEoCzIULkMy",
+          "U1Jvb21SZWFkeVJlcXVlc3RIABIyChFyb29tUmVhZHlSZXNwb25zZRgSIAEo",
+          "CzIVLlMyQ1Jvb21SZWFkeVJlc3BvbnNlSAASOgoVcm9vbVJlYWR5Tm90aWZp",
+          "Y2F0aW9uGBMgASgLMhkuUzJDUm9vbVJlYWR5Tm90aWZpY2F0aW9uSAASQAoY",
+          "Z2V0Um9vbVJlYWR5U3RhdGVSZXF1ZXN0GBQgASgLMhwuQzJTR2V0Um9vbVJl",
+          "YWR5U3RhdGVSZXF1ZXN0SAASQgoZZ2V0Um9vbVJlYWR5U3RhdGVSZXNwb25z",
+          "ZRgVIAEoCzIdLlMyQ0dldFJvb21SZWFkeVN0YXRlUmVzcG9uc2VIABI0ChJj",
+          "aGF0TWVzc2FnZVJlcXVlc3QYFiABKAsyFi5DMlNDaGF0TWVzc2FnZVJlcXVl",
+          "c3RIABI2ChNjaGF0TWVzc2FnZVJlc3BvbnNlGBcgASgLMhcuUzJDQ2hhdE1l",
+          "c3NhZ2VSZXNwb25zZUgAEj4KF2NoYXRNZXNzYWdlTm90aWZpY2F0aW9uGBgg",
+          "ASgLMhsuUzJDQ2hhdE1lc3NhZ2VOb3RpZmljYXRpb25IABI0ChJnYW1lUHJl",
+          "cGFyZVJlcXVlc3QYLSABKAsyFi5DMlNHYW1lUHJlcGFyZVJlcXVlc3RIABI2",
+          "ChNnYW1lUHJlcGFyZVJlc3BvbnNlGC4gASgLMhcuUzJDR2FtZVByZXBhcmVS",
+          "ZXNwb25zZUgAEj4KF2dhbWVQcmVwYXJlTm90aWZpY2F0aW9uGC8gASgLMhsu",
+          "UzJDR2FtZVByZXBhcmVOb3RpZmljYXRpb25IABIwChBnYW1lU3RhcnRSZXF1",
+          "ZXN0GDAgASgLMhQuQzJTR2FtZVN0YXJ0UmVxdWVzdEgAEjIKEWdhbWVTdGFy",
+          "dFJlc3BvbnNlGDEgASgLMhUuUzJDR2FtZVN0YXJ0UmVzcG9uc2VIABI6ChVn",
+          "YW1lU3RhcnROb3RpZmljYXRpb24YMiABKAsyGS5TMkNHYW1lU3RhcnROb3Rp",
+          "ZmljYXRpb25IABI6ChVnYW1lU2VydmVySW5pdFJlcXVlc3QYZCABKAsyGS5D",
+          "MlNHYW1lU2VydmVySW5pdFJlcXVlc3RIABI8ChZnYW1lU2VydmVySW5pdFJl",
+          "c3BvbnNlGGUgASgLMhouUzJDR2FtZVNlcnZlckluaXRSZXNwb25zZUgAEkQK",
+          "GmdhbWVTZXJ2ZXJJbml0Tm90aWZpY2F0aW9uGGYgASgLMh4uUzJDR2FtZVNl",
+          "cnZlckluaXROb3RpZmljYXRpb25IABI6ChVwb3NpdGlvblVwZGF0ZVJlcXVl",
+          "c3QYZyABKAsyGS5DMlNQb3NpdGlvblVwZGF0ZVJlcXVlc3RIABJEChpwb3Np",
+          "dGlvblVwZGF0ZU5vdGlmaWNhdGlvbhhoIAEoCzIeLlMyQ1Bvc2l0aW9uVXBk",
+          "YXRlTm90aWZpY2F0aW9uSAASLAoOdXNlQ2FyZFJlcXVlc3QYaSABKAsyEi5D",
+          "MlNVc2VDYXJkUmVxdWVzdEgAEi4KD3VzZUNhcmRSZXNwb25zZRhqIAEoCzIT",
+          "LlMyQ1VzZUNhcmRSZXNwb25zZUgAEjYKE3VzZUNhcmROb3RpZmljYXRpb24Y",
+          "ayABKAsyFy5TMkNVc2VDYXJkTm90aWZpY2F0aW9uSAASOgoVZXF1aXBDYXJk",
+          "Tm90aWZpY2F0aW9uGGwgASgLMhkuUzJDRXF1aXBDYXJkTm90aWZpY2F0aW9u",
+          "SAASPAoWY2FyZEVmZmVjdE5vdGlmaWNhdGlvbhhtIAEoCzIaLlMyQ0NhcmRF",
+          "ZmZlY3ROb3RpZmljYXRpb25IABI8ChZmbGVhTWFya2V0Tm90aWZpY2F0aW9u",
+          "GG4gASgLMhouUzJDRmxlYU1hcmtldE5vdGlmaWNhdGlvbkgAEjoKFWZsZWFN",
+          "YXJrZXRQaWNrUmVxdWVzdBhvIAEoCzIZLkMyU0ZsZWFNYXJrZXRQaWNrUmVx",
+          "dWVzdEgAEjwKFmZsZWFNYXJrZXRQaWNrUmVzcG9uc2UYcCABKAsyGi5TMkNG",
+          "bGVhTWFya2V0UGlja1Jlc3BvbnNlSAASPAoWdXNlclVwZGF0ZU5vdGlmaWNh",
+          "dGlvbhhxIAEoCzIaLlMyQ1VzZXJVcGRhdGVOb3RpZmljYXRpb25IABI+Chdw",
+          "aGFzZVVwZGF0ZU5vdGlmaWNhdGlvbhhyIAEoCzIbLlMyQ1BoYXNlVXBkYXRl",
+          "Tm90aWZpY2F0aW9uSAASLgoPcmVhY3Rpb25SZXF1ZXN0GHMgASgLMhMuQzJT",
+          "UmVhY3Rpb25SZXF1ZXN0SAASMAoQcmVhY3Rpb25SZXNwb25zZRh0IAEoCzIU",
+          "LlMyQ1JlYWN0aW9uUmVzcG9uc2VIABI0ChJkZXN0cm95Q2FyZFJlcXVlc3QY",
+          "dSABKAsyFi5DMlNEZXN0cm95Q2FyZFJlcXVlc3RIABI2ChNkZXN0cm95Q2Fy",
+          "ZFJlc3BvbnNlGHYgASgLMhcuUzJDRGVzdHJveUNhcmRSZXNwb25zZUgAEjYK",
+          "E2dhbWVFbmROb3RpZmljYXRpb24YdyABKAsyFy5TMkNHYW1lRW5kTm90aWZp",
+          "Y2F0aW9uSAASMgoRY2FyZFNlbGVjdFJlcXVlc3QYeCABKAsyFS5DMlNDYXJk",
+          "U2VsZWN0UmVxdWVzdEgAEjQKEmNhcmRTZWxlY3RSZXNwb25zZRh5IAEoCzIW",
+          "LlMyQ0NhcmRTZWxlY3RSZXNwb25zZUgAEjIKEXBhc3NEZWJ1ZmZSZXF1ZXN0",
+          "GHogASgLMhUuQzJTUGFzc0RlYnVmZlJlcXVlc3RIABI0ChJwYXNzRGVidWZm",
+          "UmVzcG9uc2UYeyABKAsyFi5TMkNQYXNzRGVidWZmUmVzcG9uc2VIABI2ChN3",
+          "YXJuaW5nTm90aWZpY2F0aW9uGHwgASgLMhcuUzJDV2FybmluZ05vdGlmaWNh",
+          "dGlvbkgAEjoKFWFuaW1hdGlvbk5vdGlmaWNhdGlvbhh9IAEoCzIZLlMyQ0Fu",
+          "aW1hdGlvbk5vdGlmaWNhdGlvbkgAEjkKFGNvbWVCYWNrTG9iYnlSZXF1ZXN0",
+          "GMYBIAEoCzIYLkMyU0NvbWVCYWNrTG9iYnlSZXF1ZXN0SAASOwoVY29tZUJh",
+          "Y2tMb2JieVJlc3BvbnNlGMcBIAEoCzIZLlMyQ0NvbWVCYWNrTG9iYnlSZXNw",
+          "b25zZUgAQgkKB3BheWxvYWQqQAoPQ2hhdE1lc3NhZ2VUeXBlEg0KCU5PTkVf",
+          "Q0hBVBAAEg0KCVVTRVJfQ0hBVBABEg8KC1NZU1RFTV9DSEFUEAIqjwMKDkds",
+          "b2JhbEZhaWxDb2RlEhEKDU5PTkVfRkFJTENPREUQABIRCg1VTktOT1dOX0VS",
+          "Uk9SEAESEwoPSU5WQUxJRF9SRVFVRVNUEAISGQoVQVVUSEVOVElDQVRJT05f",
+          "RkFJTEVEEAMSFgoSQ1JFQVRFX1JPT01fRkFJTEVEEAQSFAoQSk9JTl9ST09N",
+          "X0ZBSUxFRBAFEhUKEUxFQVZFX1JPT01fRkFJTEVEEAYSEwoPUkVHSVNURVJf",
+          "RkFJTEVEEAcSEgoOUk9PTV9OT1RfRk9VTkQQCBIXChNDSEFSQUNURVJfTk9U",
+          "X0ZPVU5EEAkSGQoVQ0hBUkFDVEVSX1NUQVRFX0VSUk9SEAoSFQoRQ0hBUkFD",
+          "VEVSX05PX0NBUkQQCxIWChJJTlZBTElEX1JPT01fU1RBVEUQDBISCg5OT1Rf",
+          "Uk9PTV9PV05FUhANEhYKEkFMUkVBRFlfVVNFRF9CQkFORxAOEhEKDUlOVkFM",
+          "SURfUEhBU0UQDxIXChNDSEFSQUNURVJfQ09OVEFJTkVEEBAqLgoLV2Fybmlu",
+          "Z1R5cGUSDgoKTk9fV0FSTklORxAAEg8KC0JPTUJfV0FOSU5HEAEqSwoHV2lu",
+          "VHlwZRIcChhUQVJHRVRfQU5EX0JPRFlHVUFSRF9XSU4QABIOCgpISVRNQU5f",
+          "V0lOEAESEgoOUFNZQ0hPUEFUSF9XSU4QAiqTAQoNQ2hhcmFjdGVyVHlwZRIS",
+          "Cg5OT05FX0NIQVJBQ1RFUhAAEgcKA1JFRBABEgkKBVNIQVJLEAMSCgoGTUFM",
+          "QU5HEAUSCgoGRlJPR0dZEAcSCAoEUElOSxAIEhAKDFNXSU1fR0xBU1NFUxAJ",
+          "EggKBE1BU0sQChIMCghESU5PU0FVUhAMEg4KClBJTktfU0xJTUUQDSrqAgoS",
+          "Q2hhcmFjdGVyU3RhdGVUeXBlEhgKFE5PTkVfQ0hBUkFDVEVSX1NUQVRFEAAS",
+          "EQoNQkJBTkdfU0hPT1RFUhABEhAKDEJCQU5HX1RBUkdFVBACEhUKEURFQVRI",
+          "X01BVENIX1NUQVRFEAMSGgoWREVBVEhfTUFUQ0hfVFVSTl9TVEFURRAEEhQK",
+          "EEZMRUFfTUFSS0VUX1RVUk4QBRIUChBGTEVBX01BUktFVF9XQUlUEAYSFQoR",
+          "R1VFUlJJTExBX1NIT09URVIQBxIUChBHVUVSUklMTEFfVEFSR0VUEAgSFQoR",
+          "QklHX0JCQU5HX1NIT09URVIQCRIUChBCSUdfQkJBTkdfVEFSR0VUEAoSDQoJ",
+          "QUJTT1JCSU5HEAsSEQoNQUJTT1JCX1RBUkdFVBAMEhEKDUhBTExVQ0lOQVRJ",
+          "TkcQDRIYChRIQUxMVUNJTkFUSU9OX1RBUkdFVBAOEg0KCUNPTlRBSU5FRBAP",
+          "KoIDCghDYXJkVHlwZRIICgROT05FEAASCQoFQkJBTkcQARINCglCSUdfQkJB",
+          "TkcQAhIKCgZTSElFTEQQAxILCgdWQUNDSU5FEAQSDAoIQ0FMTF8xMTkQBRIP",
+          "CgtERUFUSF9NQVRDSBAGEg0KCUdVRVJSSUxMQRAHEgoKBkFCU09SQhAIEhEK",
+          "DUhBTExVQ0lOQVRJT04QCRIPCgtGTEVBX01BUktFVBAKEhMKD01BVFVSRURf",
+          "U0FWSU5HUxALEg8KC1dJTl9MT1RURVJZEAwSDgoKU05JUEVSX0dVThANEgwK",
+          "CEhBTkRfR1VOEA4SEAoMREVTRVJUX0VBR0xFEA8SDgoKQVVUT19SSUZMRRAQ",
+          "EhEKDUxBU0VSX1BPSU5URVIQERIJCgVSQURBUhASEg8KC0FVVE9fU0hJRUxE",
+          "EBMSEAoMU1RFQUxUSF9TVUlUEBQSFAoQQ09OVEFJTk1FTlRfVU5JVBAVEhQK",
+          "EFNBVEVMTElURV9UQVJHRVQQFhIICgRCT01CEBcqUAoIUm9sZVR5cGUSDQoJ",
+          "Tk9ORV9ST0xFEAASCgoGVEFSR0VUEAESDQoJQk9EWUdVQVJEEAISCgoGSElU",
+          "TUFOEAMSDgoKUFNZQ0hPUEFUSBAEKjIKDVJvb21TdGF0ZVR5cGUSCAoEV0FJ",
+          "VBAAEgsKB1BSRVBBUkUQARIKCgZJTkdBTUUQAio6CglQaGFzZVR5cGUSDgoK",
+          "Tk9ORV9QSEFTRRAAEgcKA0RBWRABEgsKB0VWRU5JTkcQAhIHCgNFTkQQAyoz",
+          "CgxSZWFjdGlvblR5cGUSEQoNTk9ORV9SRUFDVElPThAAEhAKDE5PVF9VU0Vf",
+          "Q0FSRBABKj0KDlNlbGVjdENhcmRUeXBlEggKBEhBTkQQABIJCgVFUVVJUBAB",
+          "EgoKBldFQVBPThACEgoKBkRFQlVGRhADKmsKDUFuaW1hdGlvblR5cGUSEAoM",
+          "Tk9fQU5JTUFUSU9OEAASHgoaU0FURUxMSVRFX1RBUkdFVF9BTklNQVRJT04Q",
+          "ARISCg5CT01CX0FOSU1BVElPThACEhQKEFNISUVMRF9BTklNQVRJT04QA2IG",
+          "cHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
-        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::GlobalFailCode), typeof(global::WarningType), typeof(global::WinType), typeof(global::CharacterType), typeof(global::CharacterStateType), typeof(global::CardType), typeof(global::RoleType), typeof(global::RoomStateType), typeof(global::PhaseType), typeof(global::ReactionType), typeof(global::SelectCardType), typeof(global::AnimationType), }, null, new pbr::GeneratedClrTypeInfo[] {
+        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::ChatMessageType), typeof(global::GlobalFailCode), typeof(global::WarningType), typeof(global::WinType), typeof(global::CharacterType), typeof(global::CharacterStateType), typeof(global::CardType), typeof(global::RoleType), typeof(global::RoomStateType), typeof(global::PhaseType), typeof(global::ReactionType), typeof(global::SelectCardType), typeof(global::AnimationType), }, null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::RoomData), global::RoomData.Parser, new[]{ "Id", "OwnerId", "Name", "MaxUserNum", "State", "Users" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::UserData), global::UserData.Parser, new[]{ "Id", "Nickname", "Character" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::CharacterData), global::CharacterData.Parser, new[]{ "CharacterType", "RoleType", "Hp", "Weapon", "StateInfo", "Equips", "Debuffs", "HandCards", "BbangCount", "HandCardsCount" }, null, null, null, null),
@@ -282,6 +294,9 @@ public static partial class ProtocolReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::S2CRoomReadyNotification), global::S2CRoomReadyNotification.Parser, new[]{ "UserReady" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::C2SGetRoomReadyStateRequest), global::C2SGetRoomReadyStateRequest.Parser, new[]{ "RoomId" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::S2CGetRoomReadyStateResponse), global::S2CGetRoomReadyStateResponse.Parser, new[]{ "Success", "ReadyStates", "FailCode" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::C2SChatMessageRequest), global::C2SChatMessageRequest.Parser, new[]{ "Message", "MessageType" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::S2CChatMessageResponse), global::S2CChatMessageResponse.Parser, new[]{ "Success", "FailCode" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::S2CChatMessageNotification), global::S2CChatMessageNotification.Parser, new[]{ "Nickname", "Message", "Timestamp", "MessageType" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::C2SGamePrepareRequest), global::C2SGamePrepareRequest.Parser, null, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::S2CGamePrepareResponse), global::S2CGamePrepareResponse.Parser, new[]{ "Success", "FailCode" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::S2CGamePrepareNotification), global::S2CGamePrepareNotification.Parser, new[]{ "Room" }, null, null, null, null),
@@ -317,13 +332,22 @@ public static partial class ProtocolReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::S2CAnimationNotification), global::S2CAnimationNotification.Parser, new[]{ "UserId", "AnimationType" }, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::C2SComeBackLobbyRequest), global::C2SComeBackLobbyRequest.Parser, null, null, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::S2CComeBackLobbyResponse), global::S2CComeBackLobbyResponse.Parser, new[]{ "UserId", "ServerInfo" }, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::GamePacket), global::GamePacket.Parser, new[]{ "LoginRequest", "LoginResponse", "SelectCharacterRequest", "SelectCharacterResponse", "CreateRoomRequest", "CreateRoomResponse", "GetRoomListRequest", "GetRoomListResponse", "JoinRoomRequest", "JoinRoomResponse", "JoinRandomRoomRequest", "JoinRandomRoomResponse", "JoinRoomNotification", "LeaveRoomRequest", "LeaveRoomResponse", "LeaveRoomNotification", "RoomReadyRequest", "RoomReadyResponse", "RoomReadyNotification", "GetRoomReadyStateRequest", "GetRoomReadyStateResponse", "GamePrepareRequest", "GamePrepareResponse", "GamePrepareNotification", "GameStartRequest", "GameStartResponse", "GameStartNotification", "GameServerInitRequest", "GameServerInitResponse", "GameServerInitNotification", "PositionUpdateRequest", "PositionUpdateNotification", "UseCardRequest", "UseCardResponse", "UseCardNotification", "EquipCardNotification", "CardEffectNotification", "FleaMarketNotification", "FleaMarketPickRequest", "FleaMarketPickResponse", "UserUpdateNotification", "PhaseUpdateNotification", "ReactionRequest", "ReactionResponse", "DestroyCardRequest", "DestroyCardResponse", "GameEndNotification", "CardSelectRequest", "CardSelectResponse", "PassDebuffRequest", "PassDebuffResponse", "WarningNotification", "AnimationNotification", "ComeBackLobbyRequest", "ComeBackLobbyResponse" }, new[]{ "Payload" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::GamePacket), global::GamePacket.Parser, new[]{ "LoginRequest", "LoginResponse", "SelectCharacterRequest", "SelectCharacterResponse", "CreateRoomRequest", "CreateRoomResponse", "GetRoomListRequest", "GetRoomListResponse", "JoinRoomRequest", "JoinRoomResponse", "JoinRandomRoomRequest", "JoinRandomRoomResponse", "JoinRoomNotification", "LeaveRoomRequest", "LeaveRoomResponse", "LeaveRoomNotification", "RoomReadyRequest", "RoomReadyResponse", "RoomReadyNotification", "GetRoomReadyStateRequest", "GetRoomReadyStateResponse", "ChatMessageRequest", "ChatMessageResponse", "ChatMessageNotification", "GamePrepareRequest", "GamePrepareResponse", "GamePrepareNotification", "GameStartRequest", "GameStartResponse", "GameStartNotification", "GameServerInitRequest", "GameServerInitResponse", "GameServerInitNotification", "PositionUpdateRequest", "PositionUpdateNotification", "UseCardRequest", "UseCardResponse", "UseCardNotification", "EquipCardNotification", "CardEffectNotification", "FleaMarketNotification", "FleaMarketPickRequest", "FleaMarketPickResponse", "UserUpdateNotification", "PhaseUpdateNotification", "ReactionRequest", "ReactionResponse", "DestroyCardRequest", "DestroyCardResponse", "GameEndNotification", "CardSelectRequest", "CardSelectResponse", "PassDebuffRequest", "PassDebuffResponse", "WarningNotification", "AnimationNotification", "ComeBackLobbyRequest", "ComeBackLobbyResponse" }, new[]{ "Payload" }, null, null, null)
         }));
   }
   #endregion
 
 }
 #region Enums
+/// <summary>
+/// 채팅 메시지 타입
+/// </summary>
+public enum ChatMessageType {
+  [pbr::OriginalName("NONE_CHAT")] NoneChat = 0,
+  [pbr::OriginalName("USER_CHAT")] UserChat = 1,
+  [pbr::OriginalName("SYSTEM_CHAT")] SystemChat = 2,
+}
+
 /// <summary>
 ///
 ///실패 코드
@@ -8530,6 +8554,812 @@ public sealed partial class S2CGetRoomReadyStateResponse : pb::IMessage<S2CGetRo
 
 }
 
+/// <summary>
+/// 채팅 메시지 전송 요청
+/// </summary>
+[global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+public sealed partial class C2SChatMessageRequest : pb::IMessage<C2SChatMessageRequest>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<C2SChatMessageRequest> _parser = new pb::MessageParser<C2SChatMessageRequest>(() => new C2SChatMessageRequest());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pb::MessageParser<C2SChatMessageRequest> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[31]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public C2SChatMessageRequest() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public C2SChatMessageRequest(C2SChatMessageRequest other) : this() {
+    message_ = other.message_;
+    messageType_ = other.messageType_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public C2SChatMessageRequest Clone() {
+    return new C2SChatMessageRequest(this);
+  }
+
+  /// <summary>Field number for the "message" field.</summary>
+  public const int MessageFieldNumber = 1;
+  private string message_ = "";
+  /// <summary>
+  /// 채팅 메시지 내용
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public string Message {
+    get { return message_; }
+    set {
+      message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  /// <summary>Field number for the "messageType" field.</summary>
+  public const int MessageTypeFieldNumber = 2;
+  private global::ChatMessageType messageType_ = global::ChatMessageType.NoneChat;
+  /// <summary>
+  /// 메시지 타입
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::ChatMessageType MessageType {
+    get { return messageType_; }
+    set {
+      messageType_ = value;
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override bool Equals(object other) {
+    return Equals(other as C2SChatMessageRequest);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Equals(C2SChatMessageRequest other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Message != other.Message) return false;
+    if (MessageType != other.MessageType) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (Message.Length != 0) hash ^= Message.GetHashCode();
+    if (MessageType != global::ChatMessageType.NoneChat) hash ^= MessageType.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (Message.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Message);
+    }
+    if (MessageType != global::ChatMessageType.NoneChat) {
+      output.WriteRawTag(16);
+      output.WriteEnum((int) MessageType);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Message.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Message);
+    }
+    if (MessageType != global::ChatMessageType.NoneChat) {
+      output.WriteRawTag(16);
+      output.WriteEnum((int) MessageType);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int CalculateSize() {
+    int size = 0;
+    if (Message.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+    }
+    if (MessageType != global::ChatMessageType.NoneChat) {
+      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MessageType);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(C2SChatMessageRequest other) {
+    if (other == null) {
+      return;
+    }
+    if (other.Message.Length != 0) {
+      Message = other.Message;
+    }
+    if (other.MessageType != global::ChatMessageType.NoneChat) {
+      MessageType = other.MessageType;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+    if ((tag & 7) == 4) {
+      // Abort on any end group tag.
+      return;
+    }
+    switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          Message = input.ReadString();
+          break;
+        }
+        case 16: {
+          MessageType = (global::ChatMessageType) input.ReadEnum();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+    if ((tag & 7) == 4) {
+      // Abort on any end group tag.
+      return;
+    }
+    switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          Message = input.ReadString();
+          break;
+        }
+        case 16: {
+          MessageType = (global::ChatMessageType) input.ReadEnum();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+}
+
+/// <summary>
+/// 채팅 메시지 전송 응답
+/// </summary>
+[global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+public sealed partial class S2CChatMessageResponse : pb::IMessage<S2CChatMessageResponse>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<S2CChatMessageResponse> _parser = new pb::MessageParser<S2CChatMessageResponse>(() => new S2CChatMessageResponse());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pb::MessageParser<S2CChatMessageResponse> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[32]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public S2CChatMessageResponse() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public S2CChatMessageResponse(S2CChatMessageResponse other) : this() {
+    success_ = other.success_;
+    failCode_ = other.failCode_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public S2CChatMessageResponse Clone() {
+    return new S2CChatMessageResponse(this);
+  }
+
+  /// <summary>Field number for the "success" field.</summary>
+  public const int SuccessFieldNumber = 1;
+  private bool success_;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Success {
+    get { return success_; }
+    set {
+      success_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "failCode" field.</summary>
+  public const int FailCodeFieldNumber = 2;
+  private global::GlobalFailCode failCode_ = global::GlobalFailCode.NoneFailcode;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::GlobalFailCode FailCode {
+    get { return failCode_; }
+    set {
+      failCode_ = value;
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override bool Equals(object other) {
+    return Equals(other as S2CChatMessageResponse);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Equals(S2CChatMessageResponse other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Success != other.Success) return false;
+    if (FailCode != other.FailCode) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (Success != false) hash ^= Success.GetHashCode();
+    if (FailCode != global::GlobalFailCode.NoneFailcode) hash ^= FailCode.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (Success != false) {
+      output.WriteRawTag(8);
+      output.WriteBool(Success);
+    }
+    if (FailCode != global::GlobalFailCode.NoneFailcode) {
+      output.WriteRawTag(16);
+      output.WriteEnum((int) FailCode);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Success != false) {
+      output.WriteRawTag(8);
+      output.WriteBool(Success);
+    }
+    if (FailCode != global::GlobalFailCode.NoneFailcode) {
+      output.WriteRawTag(16);
+      output.WriteEnum((int) FailCode);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int CalculateSize() {
+    int size = 0;
+    if (Success != false) {
+      size += 1 + 1;
+    }
+    if (FailCode != global::GlobalFailCode.NoneFailcode) {
+      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FailCode);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(S2CChatMessageResponse other) {
+    if (other == null) {
+      return;
+    }
+    if (other.Success != false) {
+      Success = other.Success;
+    }
+    if (other.FailCode != global::GlobalFailCode.NoneFailcode) {
+      FailCode = other.FailCode;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+    if ((tag & 7) == 4) {
+      // Abort on any end group tag.
+      return;
+    }
+    switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 8: {
+          Success = input.ReadBool();
+          break;
+        }
+        case 16: {
+          FailCode = (global::GlobalFailCode) input.ReadEnum();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+    if ((tag & 7) == 4) {
+      // Abort on any end group tag.
+      return;
+    }
+    switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 8: {
+          Success = input.ReadBool();
+          break;
+        }
+        case 16: {
+          FailCode = (global::GlobalFailCode) input.ReadEnum();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+}
+
+/// <summary>
+/// 채팅 메시지 알림 (서버 -> 모든 클라이언트)
+/// </summary>
+[global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+public sealed partial class S2CChatMessageNotification : pb::IMessage<S2CChatMessageNotification>
+#if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    , pb::IBufferMessage
+#endif
+{
+  private static readonly pb::MessageParser<S2CChatMessageNotification> _parser = new pb::MessageParser<S2CChatMessageNotification>(() => new S2CChatMessageNotification());
+  private pb::UnknownFieldSet _unknownFields;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pb::MessageParser<S2CChatMessageNotification> Parser { get { return _parser; } }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public static pbr::MessageDescriptor Descriptor {
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[33]; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  pbr::MessageDescriptor pb::IMessage.Descriptor {
+    get { return Descriptor; }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public S2CChatMessageNotification() {
+    OnConstruction();
+  }
+
+  partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public S2CChatMessageNotification(S2CChatMessageNotification other) : this() {
+    nickname_ = other.nickname_;
+    message_ = other.message_;
+    timestamp_ = other.timestamp_;
+    messageType_ = other.messageType_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public S2CChatMessageNotification Clone() {
+    return new S2CChatMessageNotification(this);
+  }
+
+  /// <summary>Field number for the "nickname" field.</summary>
+  public const int NicknameFieldNumber = 1;
+  private string nickname_ = "";
+  /// <summary>
+  /// 닉네임
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public string Nickname {
+    get { return nickname_; }
+    set {
+      nickname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  /// <summary>Field number for the "message" field.</summary>
+  public const int MessageFieldNumber = 2;
+  private string message_ = "";
+  /// <summary>
+  /// 메시지 내용
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public string Message {
+    get { return message_; }
+    set {
+      message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  /// <summary>Field number for the "timestamp" field.</summary>
+  public const int TimestampFieldNumber = 3;
+  private long timestamp_;
+  /// <summary>
+  /// 서버 타임스탬프
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public long Timestamp {
+    get { return timestamp_; }
+    set {
+      timestamp_ = value;
+    }
+  }
+
+  /// <summary>Field number for the "messageType" field.</summary>
+  public const int MessageTypeFieldNumber = 4;
+  private global::ChatMessageType messageType_ = global::ChatMessageType.NoneChat;
+  /// <summary>
+  /// 메시지 타입
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::ChatMessageType MessageType {
+    get { return messageType_; }
+    set {
+      messageType_ = value;
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override bool Equals(object other) {
+    return Equals(other as S2CChatMessageNotification);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Equals(S2CChatMessageNotification other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (Nickname != other.Nickname) return false;
+    if (Message != other.Message) return false;
+    if (Timestamp != other.Timestamp) return false;
+    if (MessageType != other.MessageType) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override int GetHashCode() {
+    int hash = 1;
+    if (Nickname.Length != 0) hash ^= Nickname.GetHashCode();
+    if (Message.Length != 0) hash ^= Message.GetHashCode();
+    if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
+    if (MessageType != global::ChatMessageType.NoneChat) hash ^= MessageType.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    if (Nickname.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Nickname);
+    }
+    if (Message.Length != 0) {
+      output.WriteRawTag(18);
+      output.WriteString(Message);
+    }
+    if (Timestamp != 0L) {
+      output.WriteRawTag(24);
+      output.WriteInt64(Timestamp);
+    }
+    if (MessageType != global::ChatMessageType.NoneChat) {
+      output.WriteRawTag(32);
+      output.WriteEnum((int) MessageType);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    if (Nickname.Length != 0) {
+      output.WriteRawTag(10);
+      output.WriteString(Nickname);
+    }
+    if (Message.Length != 0) {
+      output.WriteRawTag(18);
+      output.WriteString(Message);
+    }
+    if (Timestamp != 0L) {
+      output.WriteRawTag(24);
+      output.WriteInt64(Timestamp);
+    }
+    if (MessageType != global::ChatMessageType.NoneChat) {
+      output.WriteRawTag(32);
+      output.WriteEnum((int) MessageType);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int CalculateSize() {
+    int size = 0;
+    if (Nickname.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Nickname);
+    }
+    if (Message.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+    }
+    if (Timestamp != 0L) {
+      size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timestamp);
+    }
+    if (MessageType != global::ChatMessageType.NoneChat) {
+      size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MessageType);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(S2CChatMessageNotification other) {
+    if (other == null) {
+      return;
+    }
+    if (other.Nickname.Length != 0) {
+      Nickname = other.Nickname;
+    }
+    if (other.Message.Length != 0) {
+      Message = other.Message;
+    }
+    if (other.Timestamp != 0L) {
+      Timestamp = other.Timestamp;
+    }
+    if (other.MessageType != global::ChatMessageType.NoneChat) {
+      MessageType = other.MessageType;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+    if ((tag & 7) == 4) {
+      // Abort on any end group tag.
+      return;
+    }
+    switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          Nickname = input.ReadString();
+          break;
+        }
+        case 18: {
+          Message = input.ReadString();
+          break;
+        }
+        case 24: {
+          Timestamp = input.ReadInt64();
+          break;
+        }
+        case 32: {
+          MessageType = (global::ChatMessageType) input.ReadEnum();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+    if ((tag & 7) == 4) {
+      // Abort on any end group tag.
+      return;
+    }
+    switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          Nickname = input.ReadString();
+          break;
+        }
+        case 18: {
+          Message = input.ReadString();
+          break;
+        }
+        case 24: {
+          Timestamp = input.ReadInt64();
+          break;
+        }
+        case 32: {
+          MessageType = (global::ChatMessageType) input.ReadEnum();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+}
+
 [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
 public sealed partial class C2SGamePrepareRequest : pb::IMessage<C2SGamePrepareRequest>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8545,7 +9375,7 @@ public sealed partial class C2SGamePrepareRequest : pb::IMessage<C2SGamePrepareR
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[31]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[34]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8706,7 +9536,7 @@ public sealed partial class S2CGamePrepareResponse : pb::IMessage<S2CGamePrepare
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[32]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[35]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8941,7 +9771,7 @@ public sealed partial class S2CGamePrepareNotification : pb::IMessage<S2CGamePre
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[33]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[36]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9148,7 +9978,7 @@ public sealed partial class C2SGameStartRequest : pb::IMessage<C2SGameStartReque
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[34]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[37]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9309,7 +10139,7 @@ public sealed partial class S2CGameStartResponse : pb::IMessage<S2CGameStartResp
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[35]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[38]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9544,7 +10374,7 @@ public sealed partial class S2CGameStartNotification : pb::IMessage<S2CGameStart
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[36]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[39]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9754,7 +10584,7 @@ public sealed partial class C2SGameServerInitRequest : pb::IMessage<C2SGameServe
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[37]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[40]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10038,7 +10868,7 @@ public sealed partial class S2CGameServerInitResponse : pb::IMessage<S2CGameServ
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[38]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[41]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10276,7 +11106,7 @@ public sealed partial class S2CGameServerInitNotification : pb::IMessage<S2CGame
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[39]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[42]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10538,7 +11368,7 @@ public sealed partial class C2SPositionUpdateRequest : pb::IMessage<C2SPositionU
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[40]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[43]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10773,7 +11603,7 @@ public sealed partial class S2CPositionUpdateResponse : pb::IMessage<S2CPosition
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[41]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[44]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11008,7 +11838,7 @@ public sealed partial class S2CPositionUpdateNotification : pb::IMessage<S2CPosi
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[42]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[45]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11195,7 +12025,7 @@ public sealed partial class C2SUseCardRequest : pb::IMessage<C2SUseCardRequest>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[43]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[46]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11436,7 +12266,7 @@ public sealed partial class S2CUseCardResponse : pb::IMessage<S2CUseCardResponse
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[44]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[47]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11671,7 +12501,7 @@ public sealed partial class S2CUseCardNotification : pb::IMessage<S2CUseCardNoti
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[45]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[48]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11946,7 +12776,7 @@ public sealed partial class S2CEquipCardNotification : pb::IMessage<S2CEquipCard
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[46]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[49]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12181,7 +13011,7 @@ public sealed partial class S2CCardEffectNotification : pb::IMessage<S2CCardEffe
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[47]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[50]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12453,7 +13283,7 @@ public sealed partial class S2CFleaMarketNotification : pb::IMessage<S2CFleaMark
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[48]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[51]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12670,7 +13500,7 @@ public sealed partial class C2SFleaMarketPickRequest : pb::IMessage<C2SFleaMarke
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[49]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[52]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12868,7 +13698,7 @@ public sealed partial class S2CFleaMarketPickResponse : pb::IMessage<S2CFleaMark
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[50]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[53]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13103,7 +13933,7 @@ public sealed partial class S2CUserUpdateNotification : pb::IMessage<S2CUserUpda
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[51]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[54]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13290,7 +14120,7 @@ public sealed partial class S2CPhaseUpdateNotification : pb::IMessage<S2CPhaseUp
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[52]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[55]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13560,7 +14390,7 @@ public sealed partial class C2SReactionRequest : pb::IMessage<C2SReactionRequest
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[53]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[56]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13761,7 +14591,7 @@ public sealed partial class S2CReactionResponse : pb::IMessage<S2CReactionRespon
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[54]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[57]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13996,7 +14826,7 @@ public sealed partial class C2SDestroyCardRequest : pb::IMessage<C2SDestroyCardR
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[55]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[58]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14183,7 +15013,7 @@ public sealed partial class S2CDestroyCardResponse : pb::IMessage<S2CDestroyCard
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[56]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[59]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14370,7 +15200,7 @@ public sealed partial class S2CGameEndNotification : pb::IMessage<S2CGameEndNoti
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[57]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[60]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14596,7 +15426,7 @@ public sealed partial class C2SCardSelectRequest : pb::IMessage<C2SCardSelectReq
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[58]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[61]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14837,7 +15667,7 @@ public sealed partial class S2CCardSelectResponse : pb::IMessage<S2CCardSelectRe
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[59]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[62]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15072,7 +15902,7 @@ public sealed partial class C2SPassDebuffRequest : pb::IMessage<C2SPassDebuffReq
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[60]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[63]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15307,7 +16137,7 @@ public sealed partial class S2CPassDebuffResponse : pb::IMessage<S2CPassDebuffRe
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[61]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[64]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15542,7 +16372,7 @@ public sealed partial class S2CWarningNotification : pb::IMessage<S2CWarningNoti
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[62]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[65]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15780,7 +16610,7 @@ public sealed partial class S2CAnimationNotification : pb::IMessage<S2CAnimation
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[63]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[66]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16015,7 +16845,7 @@ public sealed partial class C2SComeBackLobbyRequest : pb::IMessage<C2SComeBackLo
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[64]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[67]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16176,7 +17006,7 @@ public sealed partial class S2CComeBackLobbyResponse : pb::IMessage<S2CComeBackL
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[65]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[68]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16426,7 +17256,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::ProtocolReflection.Descriptor.MessageTypes[66]; }
+    get { return global::ProtocolReflection.Descriptor.MessageTypes[69]; }
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16509,6 +17339,15 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
         break;
       case PayloadOneofCase.GetRoomReadyStateResponse:
         GetRoomReadyStateResponse = other.GetRoomReadyStateResponse.Clone();
+        break;
+      case PayloadOneofCase.ChatMessageRequest:
+        ChatMessageRequest = other.ChatMessageRequest.Clone();
+        break;
+      case PayloadOneofCase.ChatMessageResponse:
+        ChatMessageResponse = other.ChatMessageResponse.Clone();
+        break;
+      case PayloadOneofCase.ChatMessageNotification:
+        ChatMessageNotification = other.ChatMessageNotification.Clone();
         break;
       case PayloadOneofCase.GamePrepareRequest:
         GamePrepareRequest = other.GamePrepareRequest.Clone();
@@ -16908,8 +17747,47 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
     }
   }
 
+  /// <summary>Field number for the "chatMessageRequest" field.</summary>
+  public const int ChatMessageRequestFieldNumber = 22;
+  /// <summary>
+  /// 채팅 메시지
+  /// </summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::C2SChatMessageRequest ChatMessageRequest {
+    get { return payloadCase_ == PayloadOneofCase.ChatMessageRequest ? (global::C2SChatMessageRequest) payload_ : null; }
+    set {
+      payload_ = value;
+      payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ChatMessageRequest;
+    }
+  }
+
+  /// <summary>Field number for the "chatMessageResponse" field.</summary>
+  public const int ChatMessageResponseFieldNumber = 23;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::S2CChatMessageResponse ChatMessageResponse {
+    get { return payloadCase_ == PayloadOneofCase.ChatMessageResponse ? (global::S2CChatMessageResponse) payload_ : null; }
+    set {
+      payload_ = value;
+      payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ChatMessageResponse;
+    }
+  }
+
+  /// <summary>Field number for the "chatMessageNotification" field.</summary>
+  public const int ChatMessageNotificationFieldNumber = 24;
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public global::S2CChatMessageNotification ChatMessageNotification {
+    get { return payloadCase_ == PayloadOneofCase.ChatMessageNotification ? (global::S2CChatMessageNotification) payload_ : null; }
+    set {
+      payload_ = value;
+      payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.ChatMessageNotification;
+    }
+  }
+
   /// <summary>Field number for the "gamePrepareRequest" field.</summary>
-  public const int GamePrepareRequestFieldNumber = 22;
+  public const int GamePrepareRequestFieldNumber = 45;
   /// <summary>
   /// 게임 시작 전 역할 및 캐릭터 셔플 요청
   /// </summary>
@@ -16924,7 +17802,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
   }
 
   /// <summary>Field number for the "gamePrepareResponse" field.</summary>
-  public const int GamePrepareResponseFieldNumber = 23;
+  public const int GamePrepareResponseFieldNumber = 46;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public global::S2CGamePrepareResponse GamePrepareResponse {
@@ -16936,7 +17814,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
   }
 
   /// <summary>Field number for the "gamePrepareNotification" field.</summary>
-  public const int GamePrepareNotificationFieldNumber = 24;
+  public const int GamePrepareNotificationFieldNumber = 47;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public global::S2CGamePrepareNotification GamePrepareNotification {
@@ -16948,7 +17826,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
   }
 
   /// <summary>Field number for the "gameStartRequest" field.</summary>
-  public const int GameStartRequestFieldNumber = 25;
+  public const int GameStartRequestFieldNumber = 48;
   /// <summary>
   /// 게임 시작
   /// </summary>
@@ -16963,7 +17841,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
   }
 
   /// <summary>Field number for the "gameStartResponse" field.</summary>
-  public const int GameStartResponseFieldNumber = 26;
+  public const int GameStartResponseFieldNumber = 49;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public global::S2CGameStartResponse GameStartResponse {
@@ -16975,7 +17853,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
   }
 
   /// <summary>Field number for the "gameStartNotification" field.</summary>
-  public const int GameStartNotificationFieldNumber = 27;
+  public const int GameStartNotificationFieldNumber = 50;
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public global::S2CGameStartNotification GameStartNotification {
@@ -17392,12 +18270,15 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
     RoomReadyNotification = 19,
     GetRoomReadyStateRequest = 20,
     GetRoomReadyStateResponse = 21,
-    GamePrepareRequest = 22,
-    GamePrepareResponse = 23,
-    GamePrepareNotification = 24,
-    GameStartRequest = 25,
-    GameStartResponse = 26,
-    GameStartNotification = 27,
+    ChatMessageRequest = 22,
+    ChatMessageResponse = 23,
+    ChatMessageNotification = 24,
+    GamePrepareRequest = 45,
+    GamePrepareResponse = 46,
+    GamePrepareNotification = 47,
+    GameStartRequest = 48,
+    GameStartResponse = 49,
+    GameStartNotification = 50,
     GameServerInitRequest = 100,
     GameServerInitResponse = 101,
     GameServerInitNotification = 102,
@@ -17477,6 +18358,9 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
     if (!object.Equals(RoomReadyNotification, other.RoomReadyNotification)) return false;
     if (!object.Equals(GetRoomReadyStateRequest, other.GetRoomReadyStateRequest)) return false;
     if (!object.Equals(GetRoomReadyStateResponse, other.GetRoomReadyStateResponse)) return false;
+    if (!object.Equals(ChatMessageRequest, other.ChatMessageRequest)) return false;
+    if (!object.Equals(ChatMessageResponse, other.ChatMessageResponse)) return false;
+    if (!object.Equals(ChatMessageNotification, other.ChatMessageNotification)) return false;
     if (!object.Equals(GamePrepareRequest, other.GamePrepareRequest)) return false;
     if (!object.Equals(GamePrepareResponse, other.GamePrepareResponse)) return false;
     if (!object.Equals(GamePrepareNotification, other.GamePrepareNotification)) return false;
@@ -17540,6 +18424,9 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
     if (payloadCase_ == PayloadOneofCase.RoomReadyNotification) hash ^= RoomReadyNotification.GetHashCode();
     if (payloadCase_ == PayloadOneofCase.GetRoomReadyStateRequest) hash ^= GetRoomReadyStateRequest.GetHashCode();
     if (payloadCase_ == PayloadOneofCase.GetRoomReadyStateResponse) hash ^= GetRoomReadyStateResponse.GetHashCode();
+    if (payloadCase_ == PayloadOneofCase.ChatMessageRequest) hash ^= ChatMessageRequest.GetHashCode();
+    if (payloadCase_ == PayloadOneofCase.ChatMessageResponse) hash ^= ChatMessageResponse.GetHashCode();
+    if (payloadCase_ == PayloadOneofCase.ChatMessageNotification) hash ^= ChatMessageNotification.GetHashCode();
     if (payloadCase_ == PayloadOneofCase.GamePrepareRequest) hash ^= GamePrepareRequest.GetHashCode();
     if (payloadCase_ == PayloadOneofCase.GamePrepareResponse) hash ^= GamePrepareResponse.GetHashCode();
     if (payloadCase_ == PayloadOneofCase.GamePrepareNotification) hash ^= GamePrepareNotification.GetHashCode();
@@ -17677,28 +18564,40 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
       output.WriteRawTag(170, 1);
       output.WriteMessage(GetRoomReadyStateResponse);
     }
-    if (payloadCase_ == PayloadOneofCase.GamePrepareRequest) {
+    if (payloadCase_ == PayloadOneofCase.ChatMessageRequest) {
       output.WriteRawTag(178, 1);
+      output.WriteMessage(ChatMessageRequest);
+    }
+    if (payloadCase_ == PayloadOneofCase.ChatMessageResponse) {
+      output.WriteRawTag(186, 1);
+      output.WriteMessage(ChatMessageResponse);
+    }
+    if (payloadCase_ == PayloadOneofCase.ChatMessageNotification) {
+      output.WriteRawTag(194, 1);
+      output.WriteMessage(ChatMessageNotification);
+    }
+    if (payloadCase_ == PayloadOneofCase.GamePrepareRequest) {
+      output.WriteRawTag(234, 2);
       output.WriteMessage(GamePrepareRequest);
     }
     if (payloadCase_ == PayloadOneofCase.GamePrepareResponse) {
-      output.WriteRawTag(186, 1);
+      output.WriteRawTag(242, 2);
       output.WriteMessage(GamePrepareResponse);
     }
     if (payloadCase_ == PayloadOneofCase.GamePrepareNotification) {
-      output.WriteRawTag(194, 1);
+      output.WriteRawTag(250, 2);
       output.WriteMessage(GamePrepareNotification);
     }
     if (payloadCase_ == PayloadOneofCase.GameStartRequest) {
-      output.WriteRawTag(202, 1);
+      output.WriteRawTag(130, 3);
       output.WriteMessage(GameStartRequest);
     }
     if (payloadCase_ == PayloadOneofCase.GameStartResponse) {
-      output.WriteRawTag(210, 1);
+      output.WriteRawTag(138, 3);
       output.WriteMessage(GameStartResponse);
     }
     if (payloadCase_ == PayloadOneofCase.GameStartNotification) {
-      output.WriteRawTag(218, 1);
+      output.WriteRawTag(146, 3);
       output.WriteMessage(GameStartNotification);
     }
     if (payloadCase_ == PayloadOneofCase.GameServerInitRequest) {
@@ -17907,28 +18806,40 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
       output.WriteRawTag(170, 1);
       output.WriteMessage(GetRoomReadyStateResponse);
     }
-    if (payloadCase_ == PayloadOneofCase.GamePrepareRequest) {
+    if (payloadCase_ == PayloadOneofCase.ChatMessageRequest) {
       output.WriteRawTag(178, 1);
+      output.WriteMessage(ChatMessageRequest);
+    }
+    if (payloadCase_ == PayloadOneofCase.ChatMessageResponse) {
+      output.WriteRawTag(186, 1);
+      output.WriteMessage(ChatMessageResponse);
+    }
+    if (payloadCase_ == PayloadOneofCase.ChatMessageNotification) {
+      output.WriteRawTag(194, 1);
+      output.WriteMessage(ChatMessageNotification);
+    }
+    if (payloadCase_ == PayloadOneofCase.GamePrepareRequest) {
+      output.WriteRawTag(234, 2);
       output.WriteMessage(GamePrepareRequest);
     }
     if (payloadCase_ == PayloadOneofCase.GamePrepareResponse) {
-      output.WriteRawTag(186, 1);
+      output.WriteRawTag(242, 2);
       output.WriteMessage(GamePrepareResponse);
     }
     if (payloadCase_ == PayloadOneofCase.GamePrepareNotification) {
-      output.WriteRawTag(194, 1);
+      output.WriteRawTag(250, 2);
       output.WriteMessage(GamePrepareNotification);
     }
     if (payloadCase_ == PayloadOneofCase.GameStartRequest) {
-      output.WriteRawTag(202, 1);
+      output.WriteRawTag(130, 3);
       output.WriteMessage(GameStartRequest);
     }
     if (payloadCase_ == PayloadOneofCase.GameStartResponse) {
-      output.WriteRawTag(210, 1);
+      output.WriteRawTag(138, 3);
       output.WriteMessage(GameStartResponse);
     }
     if (payloadCase_ == PayloadOneofCase.GameStartNotification) {
-      output.WriteRawTag(218, 1);
+      output.WriteRawTag(146, 3);
       output.WriteMessage(GameStartNotification);
     }
     if (payloadCase_ == PayloadOneofCase.GameServerInitRequest) {
@@ -18115,6 +19026,15 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
     }
     if (payloadCase_ == PayloadOneofCase.GetRoomReadyStateResponse) {
       size += 2 + pb::CodedOutputStream.ComputeMessageSize(GetRoomReadyStateResponse);
+    }
+    if (payloadCase_ == PayloadOneofCase.ChatMessageRequest) {
+      size += 2 + pb::CodedOutputStream.ComputeMessageSize(ChatMessageRequest);
+    }
+    if (payloadCase_ == PayloadOneofCase.ChatMessageResponse) {
+      size += 2 + pb::CodedOutputStream.ComputeMessageSize(ChatMessageResponse);
+    }
+    if (payloadCase_ == PayloadOneofCase.ChatMessageNotification) {
+      size += 2 + pb::CodedOutputStream.ComputeMessageSize(ChatMessageNotification);
     }
     if (payloadCase_ == PayloadOneofCase.GamePrepareRequest) {
       size += 2 + pb::CodedOutputStream.ComputeMessageSize(GamePrepareRequest);
@@ -18356,6 +19276,24 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GetRoomReadyStateResponse = new global::S2CGetRoomReadyStateResponse();
         }
         GetRoomReadyStateResponse.MergeFrom(other.GetRoomReadyStateResponse);
+        break;
+      case PayloadOneofCase.ChatMessageRequest:
+        if (ChatMessageRequest == null) {
+          ChatMessageRequest = new global::C2SChatMessageRequest();
+        }
+        ChatMessageRequest.MergeFrom(other.ChatMessageRequest);
+        break;
+      case PayloadOneofCase.ChatMessageResponse:
+        if (ChatMessageResponse == null) {
+          ChatMessageResponse = new global::S2CChatMessageResponse();
+        }
+        ChatMessageResponse.MergeFrom(other.ChatMessageResponse);
+        break;
+      case PayloadOneofCase.ChatMessageNotification:
+        if (ChatMessageNotification == null) {
+          ChatMessageNotification = new global::S2CChatMessageNotification();
+        }
+        ChatMessageNotification.MergeFrom(other.ChatMessageNotification);
         break;
       case PayloadOneofCase.GamePrepareRequest:
         if (GamePrepareRequest == null) {
@@ -18772,6 +19710,33 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           break;
         }
         case 178: {
+          global::C2SChatMessageRequest subBuilder = new global::C2SChatMessageRequest();
+          if (payloadCase_ == PayloadOneofCase.ChatMessageRequest) {
+            subBuilder.MergeFrom(ChatMessageRequest);
+          }
+          input.ReadMessage(subBuilder);
+          ChatMessageRequest = subBuilder;
+          break;
+        }
+        case 186: {
+          global::S2CChatMessageResponse subBuilder = new global::S2CChatMessageResponse();
+          if (payloadCase_ == PayloadOneofCase.ChatMessageResponse) {
+            subBuilder.MergeFrom(ChatMessageResponse);
+          }
+          input.ReadMessage(subBuilder);
+          ChatMessageResponse = subBuilder;
+          break;
+        }
+        case 194: {
+          global::S2CChatMessageNotification subBuilder = new global::S2CChatMessageNotification();
+          if (payloadCase_ == PayloadOneofCase.ChatMessageNotification) {
+            subBuilder.MergeFrom(ChatMessageNotification);
+          }
+          input.ReadMessage(subBuilder);
+          ChatMessageNotification = subBuilder;
+          break;
+        }
+        case 362: {
           global::C2SGamePrepareRequest subBuilder = new global::C2SGamePrepareRequest();
           if (payloadCase_ == PayloadOneofCase.GamePrepareRequest) {
             subBuilder.MergeFrom(GamePrepareRequest);
@@ -18780,7 +19745,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GamePrepareRequest = subBuilder;
           break;
         }
-        case 186: {
+        case 370: {
           global::S2CGamePrepareResponse subBuilder = new global::S2CGamePrepareResponse();
           if (payloadCase_ == PayloadOneofCase.GamePrepareResponse) {
             subBuilder.MergeFrom(GamePrepareResponse);
@@ -18789,7 +19754,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GamePrepareResponse = subBuilder;
           break;
         }
-        case 194: {
+        case 378: {
           global::S2CGamePrepareNotification subBuilder = new global::S2CGamePrepareNotification();
           if (payloadCase_ == PayloadOneofCase.GamePrepareNotification) {
             subBuilder.MergeFrom(GamePrepareNotification);
@@ -18798,7 +19763,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GamePrepareNotification = subBuilder;
           break;
         }
-        case 202: {
+        case 386: {
           global::C2SGameStartRequest subBuilder = new global::C2SGameStartRequest();
           if (payloadCase_ == PayloadOneofCase.GameStartRequest) {
             subBuilder.MergeFrom(GameStartRequest);
@@ -18807,7 +19772,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GameStartRequest = subBuilder;
           break;
         }
-        case 210: {
+        case 394: {
           global::S2CGameStartResponse subBuilder = new global::S2CGameStartResponse();
           if (payloadCase_ == PayloadOneofCase.GameStartResponse) {
             subBuilder.MergeFrom(GameStartResponse);
@@ -18816,7 +19781,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GameStartResponse = subBuilder;
           break;
         }
-        case 218: {
+        case 402: {
           global::S2CGameStartNotification subBuilder = new global::S2CGameStartNotification();
           if (payloadCase_ == PayloadOneofCase.GameStartNotification) {
             subBuilder.MergeFrom(GameStartNotification);
@@ -19286,6 +20251,33 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           break;
         }
         case 178: {
+          global::C2SChatMessageRequest subBuilder = new global::C2SChatMessageRequest();
+          if (payloadCase_ == PayloadOneofCase.ChatMessageRequest) {
+            subBuilder.MergeFrom(ChatMessageRequest);
+          }
+          input.ReadMessage(subBuilder);
+          ChatMessageRequest = subBuilder;
+          break;
+        }
+        case 186: {
+          global::S2CChatMessageResponse subBuilder = new global::S2CChatMessageResponse();
+          if (payloadCase_ == PayloadOneofCase.ChatMessageResponse) {
+            subBuilder.MergeFrom(ChatMessageResponse);
+          }
+          input.ReadMessage(subBuilder);
+          ChatMessageResponse = subBuilder;
+          break;
+        }
+        case 194: {
+          global::S2CChatMessageNotification subBuilder = new global::S2CChatMessageNotification();
+          if (payloadCase_ == PayloadOneofCase.ChatMessageNotification) {
+            subBuilder.MergeFrom(ChatMessageNotification);
+          }
+          input.ReadMessage(subBuilder);
+          ChatMessageNotification = subBuilder;
+          break;
+        }
+        case 362: {
           global::C2SGamePrepareRequest subBuilder = new global::C2SGamePrepareRequest();
           if (payloadCase_ == PayloadOneofCase.GamePrepareRequest) {
             subBuilder.MergeFrom(GamePrepareRequest);
@@ -19294,7 +20286,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GamePrepareRequest = subBuilder;
           break;
         }
-        case 186: {
+        case 370: {
           global::S2CGamePrepareResponse subBuilder = new global::S2CGamePrepareResponse();
           if (payloadCase_ == PayloadOneofCase.GamePrepareResponse) {
             subBuilder.MergeFrom(GamePrepareResponse);
@@ -19303,7 +20295,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GamePrepareResponse = subBuilder;
           break;
         }
-        case 194: {
+        case 378: {
           global::S2CGamePrepareNotification subBuilder = new global::S2CGamePrepareNotification();
           if (payloadCase_ == PayloadOneofCase.GamePrepareNotification) {
             subBuilder.MergeFrom(GamePrepareNotification);
@@ -19312,7 +20304,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GamePrepareNotification = subBuilder;
           break;
         }
-        case 202: {
+        case 386: {
           global::C2SGameStartRequest subBuilder = new global::C2SGameStartRequest();
           if (payloadCase_ == PayloadOneofCase.GameStartRequest) {
             subBuilder.MergeFrom(GameStartRequest);
@@ -19321,7 +20313,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GameStartRequest = subBuilder;
           break;
         }
-        case 210: {
+        case 394: {
           global::S2CGameStartResponse subBuilder = new global::S2CGameStartResponse();
           if (payloadCase_ == PayloadOneofCase.GameStartResponse) {
             subBuilder.MergeFrom(GameStartResponse);
@@ -19330,7 +20322,7 @@ public sealed partial class GamePacket : pb::IMessage<GamePacket>
           GameStartResponse = subBuilder;
           break;
         }
-        case 218: {
+        case 402: {
           global::S2CGameStartNotification subBuilder = new global::S2CGameStartNotification();
           if (payloadCase_ == PayloadOneofCase.GameStartNotification) {
             subBuilder.MergeFrom(GameStartNotification);

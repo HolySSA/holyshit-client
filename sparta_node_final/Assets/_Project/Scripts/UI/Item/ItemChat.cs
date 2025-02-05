@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
 
-public class ItemChat : UIListItem
+public class ItemChat : ObjectPoolBase
 {
   [Header("UI Components")]
   [SerializeField] private TextMeshProUGUI userNameText; // 유저 이름
@@ -15,6 +15,12 @@ public class ItemChat : UIListItem
   [SerializeField] private TextMeshProUGUI timeText; // 시간
 
   private ChatMessageInfo messageInfo;
+
+  public override void Init(params object[] param)
+  {
+    if (param.Length >= 1 && param[0] is ChatMessageInfo info)
+      SetItem(info);
+  }
 
   /// <summary>
   /// 채팅 메시지 아이템 초기화
@@ -36,13 +42,13 @@ public class ItemChat : UIListItem
   {
     switch (messageType)
     {
-      case ChatMessageType.System:
+      case ChatMessageType.SystemChat:
         userNameText.gameObject.SetActive(true);
         userNameText.text = "System";
         userNameText.color = Color.yellow;
         messageText.color = Color.yellow;
         break;
-      case ChatMessageType.User:
+      case ChatMessageType.UserChat:
         userNameText.gameObject.SetActive(true);
         userNameText.color = Color.white;
         messageText.color = Color.white;
@@ -64,18 +70,11 @@ public struct ChatMessageInfo
   public DateTime time;
   public ChatMessageType messageType;
 
-  public ChatMessageInfo(string userName, string message, DateTime time, ChatMessageType type = ChatMessageType.User)
+  public ChatMessageInfo(string userName, string message, DateTime time, ChatMessageType type = ChatMessageType.UserChat)
   {
     this.userName = userName;
     this.message = message;
     this.time = time;
     this.messageType = type;
   }
-}
-
-// 메시지 타입 열거형
-public enum ChatMessageType
-{
-  System,
-  User,
 }

@@ -78,7 +78,7 @@ message ServerInfoData {
     string token = 3;  // 서버 인증용 토큰
 }
 
-/* 
+/*
     패킷 명세
 */
 message C2SLoginRequest {
@@ -115,7 +115,7 @@ message S2CCreateRoomResponse {
 }
 
 message C2SGetRoomListRequest {
-    
+
 }
 
 message S2CGetRoomListResponse{
@@ -180,6 +180,26 @@ message S2CGetRoomReadyStateResponse {
     bool success = 1;
     repeated RoomUserReadyData readyStates = 2;
     GlobalFailCode failCode = 3;
+}
+
+// 채팅 메시지 전송 요청
+message C2SChatMessageRequest {
+    string message = 1;           // 채팅 메시지 내용
+    ChatMessageType messageType = 2;  // 메시지 타입
+}
+
+// 채팅 메시지 전송 응답
+message S2CChatMessageResponse {
+    bool success = 1;
+    GlobalFailCode failCode = 2;
+}
+
+// 채팅 메시지 알림 (서버 -> 모든 클라이언트)
+message S2CChatMessageNotification {
+    string nickname = 1; // 닉네임
+    string message = 2; // 메시지 내용
+    int64 timestamp = 3; // 서버 타임스탬프
+    ChatMessageType messageType = 4; // 메시지 타입
 }
 
 message C2SGamePrepareRequest {
@@ -398,15 +418,20 @@ message GamePacket {
         C2SGetRoomReadyStateRequest getRoomReadyStateRequest = 20;
         S2CGetRoomReadyStateResponse getRoomReadyStateResponse = 21;
 
+        // 채팅 메시지
+        C2SChatMessageRequest chatMessageRequest = 22;
+        S2CChatMessageResponse chatMessageResponse = 23;
+        S2CChatMessageNotification chatMessageNotification = 24;
+
         // 게임 시작 전 역할 및 캐릭터 셔플 요청
-        C2SGamePrepareRequest gamePrepareRequest = 22;
-        S2CGamePrepareResponse gamePrepareResponse = 23;
-        S2CGamePrepareNotification gamePrepareNotification = 24;
+        C2SGamePrepareRequest gamePrepareRequest = 45;
+        S2CGamePrepareResponse gamePrepareResponse = 46;
+        S2CGamePrepareNotification gamePrepareNotification = 47;
 
         // 게임 시작
-        C2SGameStartRequest gameStartRequest = 25;
-        S2CGameStartResponse gameStartResponse = 26;
-        S2CGameStartNotification gameStartNotification = 27;
+        C2SGameStartRequest gameStartRequest = 48;
+        S2CGameStartResponse gameStartResponse = 49;
+        S2CGameStartNotification gameStartNotification = 50;
 
         // 게임 서버 초기화
         C2SGameServerInitRequest gameServerInitRequest = 100;
@@ -599,4 +624,11 @@ enum AnimationType {
     SATELLITE_TARGET_ANIMATION = 1;
     BOMB_ANIMATION = 2;
     SHIELD_ANIMATION = 3;
+}
+
+// 채팅 메시지 타입
+enum ChatMessageType {
+    NONE_CHAT = 0;
+    USER_CHAT = 1;
+    SYSTEM_CHAT = 2;
 }

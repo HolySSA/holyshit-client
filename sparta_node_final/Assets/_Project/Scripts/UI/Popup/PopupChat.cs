@@ -8,16 +8,21 @@ using TMPro;
 
 public class PopupChat : UIBase
 {
-    [SerializeField] private ScrollRect chatScrollRect;        // 채팅 스크롤뷰
-    [SerializeField] private RectTransform contentRect;       // 스크롤뷰의 컨텐츠
-    [SerializeField] private TMP_InputField chatInputField;       // 채팅 입력 필드
-    [SerializeField] private GameObject chatItemPrefab;       // 채팅 메시지 프리팹
-    private List<GameObject> chatItems = new List<GameObject>();  // 채팅 메시지 오브젝트 관리용
+    private const int MAX_CHAT_MESSAGES = 50;
+    private const string CHAT_ITEM_CODE = "ItemChat";
+
+    [SerializeField] private ScrollRect chatScrollRect; // 채팅 스크롤뷰
+    [SerializeField] private RectTransform contentRect; // 스크롤뷰의 컨텐츠
+    [SerializeField] private TMP_InputField chatInputField; // 채팅 입력 필드
+    private Queue<ItemChat> activeChatItems = new Queue<ItemChat>();
 
     private bool isScrolledToBottom = true; // 스크롤이 맨 아래에 있는지 확인
 
     public override void Opened(object[] param)
     {
+        if (!PoolManager.instance.isInit)
+            PoolManager.instance.Init();
+
         chatInputField.onEndEdit.AddListener(OnInputFieldEndEdit);
         chatScrollRect.onValueChanged.AddListener(OnScrollValueChanged);
     }
@@ -30,6 +35,13 @@ public class PopupChat : UIBase
 
     public override void HideDirect()
     {
+        // 모든 활성 채팅 아이템을 풀로 반환
+        while (activeChatItems.Count > 0)
+        {
+            var item = activeChatItems.Dequeue();
+            item.Release();
+        }
+
         UIManager.Hide<PopupChat>();
     }
 
@@ -51,26 +63,39 @@ public class PopupChat : UIBase
     private void SendMessage()
     {
         string message = chatInputField.text;
-        CreateChatMessage("사용자", message, ChatMessageType.User);
+
+        // 서버로 채팅 메시지 전송
+        GamePacket packet = new GamePacket();
+        packet.ChatMessageRequest = new C2SChatMessageRequest
+        {
+            Message = message,
+            MessageType = ChatMessageType.UserChat
+        };
+
+        SocketManager.instance.Send(packet);
+    }
+
+    public void ClearChatInputField()
+    {
         chatInputField.text = "";
         chatInputField.ActivateInputField();
     }
 
-    private void CreateChatMessage(string userName, string message, ChatMessageType messageType)
+    public void CreateChatMessage(string userName, string message, long timestamp, ChatMessageType messageType)
     {
-        // 채팅 메시지 생성
-        GameObject chatItem = Instantiate(chatItemPrefab, contentRect);
-        ItemChat messageItem = chatItem.GetComponent<ItemChat>();
-
-        if (messageItem != null)
+        // timestamp를 DateTime으로 변환 (Unix timestamp -> DateTime)
+        DateTime messageTime = DateTimeOffset.FromUnixTimeMilliseconds(timestamp).DateTime.ToLocalTime();
+        ChatMessageInfo info = new ChatMessageInfo(userName, message, messageTime, messageType);
+        // 오브젝트 풀에서 채팅 아이템 가져오기
+        ItemChat messageItem = PoolManager.instance.Spawn<ItemChat>(CHAT_ITEM_CODE, contentRect, info);
+        // 최대 메시지 수를 초과하면 가장 오래된 메시지 제거
+        if (activeChatItems.Count >= MAX_CHAT_MESSAGES)
         {
-            ChatMessageInfo info = new ChatMessageInfo(userName, message, DateTime.Now, messageType);
-            messageItem.SetItem(info);
-            chatItems.Add(chatItem);
+            var oldestItem = activeChatItems.Dequeue();
+            oldestItem.Release(); // 오브젝트 풀로 반환
         }
-
+        activeChatItems.Enqueue(messageItem);
         Canvas.ForceUpdateCanvases();
-        // 스크롤이 맨 아래에 있을 때만 자동 스크롤
         if (isScrolledToBottom)
             StartCoroutine(ScrollToBottom());
     }

@@ -13,13 +13,8 @@ MonoBehaviour:
   m_Name: ObjectPool Datas
   m_EditorClassIdentifier: 
   objectPoolDatas:
-  - rCode: MON00001
+  - rCode: ItemChat
     count: 50
     velocity: 25
-    prefab: {fileID: 6664694102412348399, guid: 146147ff28f452b4caa452051d87fcef, type: 3}
-    parent: {fileID: 0}
-  - rCode: TOW00001
-    count: 20
-    velocity: 10
-    prefab: {fileID: 0}
+    prefab: {fileID: 9007536943541165658, guid: a2d354a31bd35bd4988e8ea6cae323cb, type: 3}
     parent: {fileID: 0}
